@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{833093C2-5EFC-4A53-9281-BE102550769C}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_msvc2017_64</QtInstall>
+    <QtModules>core;xml;network;gui;widgets;serialport;networkauth</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_msvc2017_64</QtInstall>
+    <QtModules>core;xml;network;gui;xmlpatterns;widgets;serialport</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Curl\include\curl;$(SolutionDir)Gdal\include;$(SolutionDir)Deps\x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Curl\lib;$(SolutionDir)Gdal\lib;$(SolutionDir)$(Platform)\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Analysis.lib;Control.lib;Core.lib;Doc.lib;gdal.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Gdal\include;$(SolutionDir)Deps\x64\include;$(SolutionDir)Curl\include\curl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PreprocessorDefinitions>CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Curl\lib;$(SolutionDir)Gdal\lib;$(SolutionDir)$(Platform)\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcurl.lib;Analysis.lib;Control.lib;Core.lib;Doc.lib;gdal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="auvinfopanel.cpp" />
+    <ClCompile Include="auvrenderer.cpp" />
+    <ClCompile Include="basemodule.cpp" />
+    <ClCompile Include="baseresult.cpp" />
+    <ClCompile Include="bdschannel.cpp" />
+    <ClCompile Include="bdsconfig.cpp" />
+    <ClCompile Include="beaconcommunciationtaskediotor.cpp" />
+    <ClCompile Include="commandparameter.cpp" />
+    <ClCompile Include="communicationchannelbase.cpp" />
+    <ClCompile Include="communicationmanager.cpp" />
+    <ClCompile Include="communicationmodule.cpp" />
+    <ClCompile Include="communicationssettingdialog.cpp" />
+    <ClCompile Include="configworker.cpp" />
+    <ClCompile Include="controlparammodule.cpp" />
+    <ClCompile Include="controlparamsettingdialog.cpp" />
+    <ClCompile Include="crccalculator.cpp" />
+    <ClCompile Include="datadownloaddialog.cpp" />
+    <ClCompile Include="datamessage.cpp" />
+    <ClCompile Include="datamodule.cpp" />
+    <ClCompile Include="dataquerydialog.cpp" />
+    <ClCompile Include="datasourceselector.cpp" />
+    <ClCompile Include="devicemonitordialog.cpp" />
+    <ClCompile Include="dispatchstrategies.cpp" />
+    <ClCompile Include="documentmodel.cpp" />
+    <ClCompile Include="editormanager.cpp" />
+    <ClCompile Include="elevationcanvas.cpp" />
+    <ClCompile Include="elevationdata.cpp" />
+    <ClCompile Include="emptyeditor.cpp" />
+    <ClCompile Include="escapetaskeditor.cpp" />
+    <ClCompile Include="filecontroller.cpp" />
+    <ClCompile Include="floatingcalibrationtaskeditor.cpp" />
+    <ClCompile Include="floatingcommunicationtaskediotr.cpp" />
+    <ClCompile Include="frame.cpp" />
+    <ClCompile Include="framebuilder.cpp" />
+    <ClCompile Include="frameparser.cpp" />
+    <ClCompile Include="MapModule\cmapcanvas.cpp" />
+    <ClCompile Include="MapModule\s57mapmodule.cpp" />
+    <ClCompile Include="maptoolauv.cpp" />
+    <ClCompile Include="messagedispatcher.cpp" />
+    <ClCompile Include="messagetype.cpp" />
+    <ClCompile Include="mission.cpp" />
+    <ClCompile Include="missioncontroller.cpp" />
+    <ClCompile Include="missionmodel.cpp" />
+    <ClCompile Include="missionmonitorresult.cpp" />
+    <ClCompile Include="missionmonitorwidget.cpp" />
+    <ClCompile Include="missionnameutil.cpp" />
+    <ClCompile Include="missionsettingdialog.cpp" />
+    <ClCompile Include="missiontreewidget.cpp" />
+    <ClCompile Include="missionview.cpp" />
+    <ClCompile Include="moduledialogbase.cpp" />
+    <ClCompile Include="patroldetecttaskeditor.cpp" />
+    <ClCompile Include="plan.cpp" />
+    <ClCompile Include="planeditor.cpp" />
+    <ClCompile Include="radiochannel.cpp" />
+    <ClCompile Include="radioconfig.cpp" />
+    <ClCompile Include="missionmonitormodule.cpp" />
+    <ClCompile Include="recoverytaskeditor.cpp" />
+    <ClCompile Include="sailcontrolmodule.cpp" />
+    <ClCompile Include="sailrestrictiondialog.cpp" />
+    <ClCompile Include="sailtaskeditor.cpp" />
+    <ClCompile Include="satelliteconfig.cpp" />
+    <ClCompile Include="selfcheckmaindialog.cpp" />
+    <ClCompile Include="selfcheckmodule.cpp" />
+    <ClCompile Include="shorebasedstriketaskeditor.cpp" />
+    <ClCompile Include="silenttaskeditor.cpp" />
+    <ClCompile Include="striketaskeditor.cpp" />
+    <ClCompile Include="task.cpp" />
+    <ClCompile Include="taskmonitordialog.cpp" />
+    <ClCompile Include="tasksequenceserializer.cpp" />
+    <ClCompile Include="tifmaptool.cpp" />
+    <ClCompile Include="tifmaptoolpan.cpp" />
+    <ClCompile Include="timeeditor.cpp" />
+    <ClCompile Include="timestampprocessor.cpp" />
+    <ClCompile Include="unitssettingdialog.cpp" />
+    <ClCompile Include="wateracousticchannel.cpp" />
+    <ClCompile Include="wateracousticconfig.cpp" />
+    <ClCompile Include="wirednetworkconfig.cpp" />
+    <ClCompile Include="wirelessnetworkchannel.cpp" />
+    <ClCompile Include="wirelessnetworkconfig.cpp" />
+    <ClCompile Include="wirednetworkchannel.cpp" />
+    <QtRcc Include="auvshorecontrol.qrc" />
+    <QtUic Include="auvshorecontrol.ui" />
+    <QtMoc Include="auvshorecontrol.h" />
+    <ClCompile Include="auvshorecontrol.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="beaconcommunciationtaskediotor.ui" />
+    <QtUic Include="communicationssettingdialog.ui" />
+    <QtUic Include="controlparamsettingdialog.ui" />
+    <QtUic Include="datadownloaddialog.ui" />
+    <QtUic Include="dataquerydialog.ui" />
+    <QtUic Include="devicemonitordialog.ui" />
+    <QtUic Include="escapetaskeditor.ui" />
+    <QtUic Include="floatingcalibrationtaskeditor.ui" />
+    <QtUic Include="floatingcommunicationtaskediotr.ui" />
+    <QtUic Include="missionmonitorwidget.ui" />
+    <QtUic Include="missionsettingdialog.ui" />
+    <QtUic Include="missionview.ui" />
+    <QtUic Include="patroldetecttaskeditor.ui" />
+    <QtUic Include="planeditor.ui" />
+    <QtUic Include="recoverytaskeditor.ui" />
+    <QtUic Include="sailrestrictiondialog.ui" />
+    <QtUic Include="sailtaskeditor.ui" />
+    <QtUic Include="selfcheckmaindialog.ui" />
+    <QtUic Include="shorebasedstriketaskeditor.ui" />
+    <QtUic Include="silenttaskeditor.ui" />
+    <QtUic Include="striketaskeditor.ui" />
+    <QtUic Include="taskmonitordialog.ui" />
+    <QtUic Include="timeeditor.ui" />
+    <QtUic Include="unitssettingdialog.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="wirednetworkchannel.h" />
+    <QtMoc Include="communicationchannelbase.h" />
+    <QtMoc Include="communicationmanager.h" />
+    <QtMoc Include="basemodule.h" />
+    <QtMoc Include="auvrenderer.h" />
+    <QtMoc Include="auvinfopanel.h" />
+    <ClInclude Include="baseresult.h" />
+    <QtMoc Include="bdschannel.h" />
+    <ClInclude Include="bdsconfig.h" />
+    <ClInclude Include="BeidouATAdapter .h" />
+    <ClInclude Include="beidouATcommandmapper.h" />
+    <ClInclude Include="cameramediaseq.h" />
+    <ClInclude Include="commandparameter.h" />
+    <QtMoc Include="communicationmodule.h" />
+    <QtMoc Include="configworker.h" />
+    <ClInclude Include="commonenum.h" />
+    <ClInclude Include="communicationchannelstatusresult.h" />
+    <QtMoc Include="controlparamsettingdialog.h" />
+    <ClInclude Include="controlparamdefs.h" />
+    <QtMoc Include="controlparammodule.h" />
+    <ClInclude Include="controlparamresult.h" />
+    <ClInclude Include="crccalculator.h" />
+    <QtMoc Include="datamodule.h" />
+    <ClInclude Include="dataresult.h" />
+    <ClInclude Include="devicepage.h" />
+    <ClInclude Include="datafilter.h" />
+    <QtMoc Include="datasourceselector.h" />
+    <QtMoc Include="radiochannel.h" />
+    <QtMoc Include="messagedispatcher.h" />
+    <ClInclude Include="dispatchstrategies.h" />
+    <QtMoc Include="elevationcanvas.h" />
+    <ClInclude Include="elevationdata.h" />
+    <ClInclude Include="enumconverter.h" />
+    <ClInclude Include="frame.h" />
+    <ClInclude Include="framebuilder.h" />
+    <ClInclude Include="frameparser.h" />
+    <QtMoc Include="MapModule\cmapcanvas.h" />
+    <QtMoc Include="MapModule\s57mapmodule.h" />
+    <QtMoc Include="maptoolauv.h" />
+    <ClInclude Include="ftpdeleteresult.h" />
+    <ClInclude Include="ftploginlistresult.h" />
+    <ClInclude Include="ftpprogressresult.h" />
+    <ClInclude Include="ftpsupportinterface.h" />
+    <ClInclude Include="ftptransferresult.h" />
+    <ClInclude Include="insparse.h" />
+    <ClInclude Include="internalprotocoladapter.h" />
+    <ClInclude Include="messagetype.h" />
+    <ClInclude Include="missionmonitorresult.h" />
+    <QtMoc Include="missionmonitorwidget.h" />
+    <ClInclude Include="mission_monitor_types.h" />
+    <ClInclude Include="moduledialogbase.h" />
+    <ClInclude Include="moduleenum.h" />
+    <ClInclude Include="module_style_helper.h" />
+    <ClInclude Include="observer.h" />
+    <ClInclude Include="radioconfig.h" />
+    <QtMoc Include="missionmonitormodule.h" />
+    <ClInclude Include="sailcontroldefs.h" />
+    <QtMoc Include="sailcontrolmodule.h" />
+    <ClInclude Include="satelliteconfig.h" />
+    <QtMoc Include="timestampprocessor.h" />
+    <ClInclude Include="selfcheckdevice.h" />
+    <ClInclude Include="selfcheckenum.h" />
+    <ClInclude Include="frameglobal.h" />
+    <QtMoc Include="selfcheckmodule.h" />
+    <ClInclude Include="selfcheckresult.h" />
+    <QtMoc Include="tifmaptool.h" />
+    <QtMoc Include="tifmaptoolpan.h" />
+    <ClInclude Include="selfchecksendresult.h" />
+    <ClInclude Include="tasksequenceserializer.h" />
+    <ClInclude Include="UIFactory.h" />
+    <QtMoc Include="unitssettingdialog.h" />
+    <QtMoc Include="wateracousticchannel.h" />
+    <ClInclude Include="wateracousticconfig.h" />
+    <ClInclude Include="wirednetworkconfig.h" />
+    <QtMoc Include="wirelessnetworkchannel.h" />
+    <ClInclude Include="wirelessnetworkconfig.h" />
+    <QtMoc Include="communicationssettingdialog.h" />
+    <QtMoc Include="devicemonitordialog.h" />
+    <QtMoc Include="taskmonitordialog.h" />
+    <QtMoc Include="missiontreewidget.h" />
+    <QtMoc Include="dataquerydialog.h" />
+    <QtMoc Include="datadownloaddialog.h" />
+    <QtMoc Include="itaskeditor.h" />
+    <QtMoc Include="sailtaskeditor.h" />
+    <QtMoc Include="silenttaskeditor.h" />
+    <QtMoc Include="timeeditor.h" />
+    <QtMoc Include="patroldetecttaskeditor.h" />
+    <QtMoc Include="striketaskeditor.h" />
+    <QtMoc Include="shorebasedstriketaskeditor.h" />
+    <QtMoc Include="escapetaskeditor.h" />
+    <QtMoc Include="floatingcalibrationtaskeditor.h" />
+    <QtMoc Include="floatingcommunicationtaskediotr.h" />
+    <QtMoc Include="beaconcommunciationtaskediotor.h" />
+    <QtMoc Include="recoverytaskeditor.h" />
+    <QtMoc Include="sailrestrictiondialog.h" />
+    <QtMoc Include="missionmodel.h" />
+    <QtMoc Include="editormanager.h" />
+    <QtMoc Include="emptyeditor.h" />
+    <ClInclude Include="channelconfig.h" />
+    <ClInclude Include="communicationchannel.h" />
+    <ClInclude Include="datamessage.h" />
+    <ClInclude Include="mission.h" />
+    <QtMoc Include="missionview.h" />
+    <QtMoc Include="planeditor.h" />
+    <ClInclude Include="missionenum.h" />
+    <ClInclude Include="missionnameutil.h" />
+    <ClInclude Include="task.h" />
+    <QtMoc Include="documentmodel.h" />
+    <QtMoc Include="filecontroller.h" />
+    <QtMoc Include="missioncontroller.h" />
+    <ClInclude Include="plan.h" />
+    <QtMoc Include="missionsettingdialog.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="selfcheckmaindialog.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

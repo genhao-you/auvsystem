@@ -1,0 +1,878 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Form Files\SelfCheckModule">
+      <UniqueIdentifier>{f60c8b6d-66aa-46d1-9365-3ed96415e082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SelfCheckModule">
+      <UniqueIdentifier>{575adcbf-6ac0-414d-9fe4-2739f49a239d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SelfCheckModule">
+      <UniqueIdentifier>{cb57b12c-6b3e-42a8-9e7b-a7ec1c7cec61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MainWindowModule">
+      <UniqueIdentifier>{f44a4da0-083b-4a38-869f-d2127d54a8e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MainWindowModule">
+      <UniqueIdentifier>{8f63e990-d65b-440c-84b5-284588f9cdfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\MainWindowModule">
+      <UniqueIdentifier>{2d22132d-f01d-49df-b640-9f65dac5df21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MissionPlanningModule">
+      <UniqueIdentifier>{d11755fe-1170-4d35-bf9d-ee4883f80bde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MissionPlanningModule">
+      <UniqueIdentifier>{a0d569ae-0b78-444b-95b5-a5afd37d1fb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\MissionPlanningModule">
+      <UniqueIdentifier>{0ba1fc71-2af1-4ff3-aebe-2eeabcbb13b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CorrespondModule">
+      <UniqueIdentifier>{c9920eb6-8a00-4cbd-9c51-447e0414e3fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CorrespondModule">
+      <UniqueIdentifier>{12d68b35-c2ec-4949-9fa4-8250141bbb5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\CorrespondModule">
+      <UniqueIdentifier>{908a942e-7ae5-4fa8-adc3-06434663731b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MonitorModule">
+      <UniqueIdentifier>{a1a5d804-ca67-449e-bca8-ee1d5b2357e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\MonitorModule">
+      <UniqueIdentifier>{08b1e841-3ff1-454f-829c-540c31135cbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MonitorModule">
+      <UniqueIdentifier>{fbab4658-7768-406f-a0f3-0a1773801cc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataManagerModule">
+      <UniqueIdentifier>{b1705aeb-9405-47c4-9022-87a22860e1ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataManagerModule">
+      <UniqueIdentifier>{80d9f594-f5ce-4b62-83b1-c815e4cb08ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\DataManagerModule">
+      <UniqueIdentifier>{086fe217-e4e5-429a-bc03-a5b94cc49902}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MissionPlanningModule\Task">
+      <UniqueIdentifier>{64e36cdf-aadf-4630-989d-3ec73a7ec5f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MissionPlanningModule\Task">
+      <UniqueIdentifier>{10d8b4c0-f368-4982-9ab2-ff58ce7feca8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\MissionPlanningModule\Task">
+      <UniqueIdentifier>{37066d82-90f9-4fec-a2e2-4de0fe9252a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MissionPlanningModule\Mission">
+      <UniqueIdentifier>{1a78bef1-abcc-4e19-bdc1-2b723cc82cf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MissionPlanningModule\Mission">
+      <UniqueIdentifier>{74160183-cc77-4cc0-acc1-1cfd799d3555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MissionPlanningModule\Plan">
+      <UniqueIdentifier>{209789e8-5d40-4e0e-b545-a60d43a8b945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MissionPlanningModule\Plan">
+      <UniqueIdentifier>{5ea98526-b9d7-42ef-abaf-f1f4d0497a81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\MissionPlanningModule\Plan">
+      <UniqueIdentifier>{bf448804-804c-4cde-ab54-93a9bc233463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\MissionPlanningModule\Mission">
+      <UniqueIdentifier>{008e5606-2662-4df5-9b33-539b0806b6fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\MapModule">
+      <UniqueIdentifier>{8e8e9a42-560d-49a0-9107-f89796f8a189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CorrespondModule\ChannelConfig">
+      <UniqueIdentifier>{7ad96b6e-5775-4fdf-9734-f78286375834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CorrespondModule\CommunicationChannel">
+      <UniqueIdentifier>{4d955201-2ecc-46a2-b6fc-754da39ad22e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CorrespondModule\ChannelConfig">
+      <UniqueIdentifier>{58033ed5-4dc6-4f7a-844c-62c78f129254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CorrespondModule\CommunicationDataCenter">
+      <UniqueIdentifier>{05bf093b-5b1b-4a0d-8b83-247bc53c41ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CorrespondModule\CommunicationDataCenter">
+      <UniqueIdentifier>{5f1306b1-63d6-41b8-a9ed-94e38c1103a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CorrespondModule\CommunicationChannel">
+      <UniqueIdentifier>{94433d5a-4ce2-4466-ac69-27339cdcf953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ManagerModule">
+      <UniqueIdentifier>{55513f10-08e3-4832-b156-7cea8bcf3874}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ManagerModule">
+      <UniqueIdentifier>{5d00de90-3319-46ee-93aa-ca0388ead3ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SelfCheckModule\Frame">
+      <UniqueIdentifier>{462268f8-1386-4b06-bd43-74315f3e1cd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SelfCheckModule\Frame">
+      <UniqueIdentifier>{683b46a0-6008-4ec6-be58-be123a88506b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UnitsSettingModule">
+      <UniqueIdentifier>{4d0e2130-307c-496c-a243-8573b55483fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\UnitsSettingModule">
+      <UniqueIdentifier>{5bcfe064-736f-4290-8741-4d9b1c1c8fae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UnitsSettingModule">
+      <UniqueIdentifier>{5a285f68-2195-4549-a120-cba19452266b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MapModule">
+      <UniqueIdentifier>{d30bd797-e98d-435f-813d-f98e93e7a977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MapModule">
+      <UniqueIdentifier>{65a2b0bc-628b-4e94-aefe-9c025bef0811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MonitorModule\Renderer">
+      <UniqueIdentifier>{0b2f50e8-b219-4930-8c58-c9701213c45f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MonitorModule\Renderer">
+      <UniqueIdentifier>{3ab024b5-70c8-4c1c-ae2f-cc0fde2d3653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MapModule\S57Map">
+      <UniqueIdentifier>{a0658234-ace6-4c71-a4a8-daeb2dee4f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MapModule\ElevationMap">
+      <UniqueIdentifier>{10f22f48-ba29-40e3-94e6-1163c9c4ca92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MapModule\ElevatioMap">
+      <UniqueIdentifier>{629ecb97-055b-416e-aed4-175a92e12792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MapModule\S57Map">
+      <UniqueIdentifier>{3ff34944-dbd7-4870-a49a-c0007bc7dcad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MissionPlanningModule\Task\TaskEditor">
+      <UniqueIdentifier>{e41ad3d5-8756-418b-aaf6-23d896d56c29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MissionPlanningModule\Task\TaskTool">
+      <UniqueIdentifier>{07a0d148-5563-4ebd-b342-cfe58e4687fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MissionPlanningModule\Task\TaskEditor">
+      <UniqueIdentifier>{45f791fd-c27c-4a5a-bb45-8b72c1c10580}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MissionPlanningModule\Task\TaskTool">
+      <UniqueIdentifier>{df310cff-e08f-445b-9b8c-f22941d34005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SelfCheckModule\Tools">
+      <UniqueIdentifier>{f211388b-d2ba-4bff-a4d0-b9fc2161d69e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SelfCheckModule\Device">
+      <UniqueIdentifier>{bb5b1423-e2ae-4faa-9ce7-dad4f504145a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ControlParamModule">
+      <UniqueIdentifier>{d2b13817-5e0e-44c9-9cc2-06e7b4ba2154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\ControlParamModule">
+      <UniqueIdentifier>{56de1b5f-5899-4dd9-ad3d-872a308f3d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ControlParamModule">
+      <UniqueIdentifier>{8ef37886-6215-416f-87a9-549734fc9c11}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="auvshorecontrol.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="selfcheckmaindialog.cpp">
+      <Filter>Source Files\SelfCheckModule</Filter>
+    </ClCompile>
+    <ClCompile Include="auvshorecontrol.cpp">
+      <Filter>Source Files\MainWindowModule</Filter>
+    </ClCompile>
+    <ClCompile Include="documentmodel.cpp">
+      <Filter>Source Files\MainWindowModule</Filter>
+    </ClCompile>
+    <ClCompile Include="filecontroller.cpp">
+      <Filter>Source Files\MainWindowModule</Filter>
+    </ClCompile>
+    <ClCompile Include="devicemonitordialog.cpp">
+      <Filter>Source Files\MonitorModule</Filter>
+    </ClCompile>
+    <ClCompile Include="taskmonitordialog.cpp">
+      <Filter>Source Files\MonitorModule</Filter>
+    </ClCompile>
+    <ClCompile Include="dataquerydialog.cpp">
+      <Filter>Source Files\DataManagerModule</Filter>
+    </ClCompile>
+    <ClCompile Include="datadownloaddialog.cpp">
+      <Filter>Source Files\DataManagerModule</Filter>
+    </ClCompile>
+    <ClCompile Include="task.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="timeeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="sailrestrictiondialog.cpp">
+      <Filter>Source Files\MissionPlanningModule</Filter>
+    </ClCompile>
+    <ClCompile Include="mission.cpp">
+      <Filter>Source Files\MissionPlanningModule\Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="missioncontroller.cpp">
+      <Filter>Source Files\MissionPlanningModule\Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="missionmodel.cpp">
+      <Filter>Source Files\MissionPlanningModule\Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="missionsettingdialog.cpp">
+      <Filter>Source Files\MissionPlanningModule\Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="missiontreewidget.cpp">
+      <Filter>Source Files\MissionPlanningModule\Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="plan.cpp">
+      <Filter>Source Files\MissionPlanningModule\Plan</Filter>
+    </ClCompile>
+    <ClCompile Include="planeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Plan</Filter>
+    </ClCompile>
+    <ClCompile Include="missionview.cpp">
+      <Filter>Source Files\MissionPlanningModule\Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="wirednetworkconfig.cpp">
+      <Filter>Source Files\CorrespondModule\ChannelConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="wirelessnetworkconfig.cpp">
+      <Filter>Source Files\CorrespondModule\ChannelConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="satelliteconfig.cpp">
+      <Filter>Source Files\CorrespondModule\ChannelConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="radioconfig.cpp">
+      <Filter>Source Files\CorrespondModule\ChannelConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="datasourceselector.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="communicationchannelbase.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="communicationmanager.cpp">
+      <Filter>Source Files\CorrespondModule</Filter>
+    </ClCompile>
+    <ClCompile Include="wirednetworkchannel.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="wirelessnetworkchannel.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="radiochannel.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="communicationssettingdialog.cpp">
+      <Filter>Source Files\CorrespondModule</Filter>
+    </ClCompile>
+    <ClCompile Include="datamessage.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="basemodule.cpp">
+      <Filter>Source Files\ManagerModule</Filter>
+    </ClCompile>
+    <ClCompile Include="messagedispatcher.cpp">
+      <Filter>Header Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="timestampprocessor.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="moduledialogbase.cpp">
+      <Filter>Source Files\ManagerModule</Filter>
+    </ClCompile>
+    <ClCompile Include="commandparameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="crccalculator.cpp">
+      <Filter>Source Files\SelfCheckModule</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="framebuilder.cpp">
+      <Filter>Source Files\SelfCheckModule\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="frameparser.cpp">
+      <Filter>Source Files\SelfCheckModule\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="dispatchstrategies.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="messagetype.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="selfcheckmodule.cpp">
+      <Filter>Source Files\SelfCheckModule</Filter>
+    </ClCompile>
+    <ClCompile Include="communicationmodule.cpp">
+      <Filter>Source Files\CorrespondModule</Filter>
+    </ClCompile>
+    <ClCompile Include="configworker.cpp">
+      <Filter>Header Files\CorrespondModule</Filter>
+    </ClCompile>
+    <ClCompile Include="frame.cpp">
+      <Filter>Source Files\SelfCheckModule\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="unitssettingdialog.cpp">
+      <Filter>Source Files\UnitsSettingModule</Filter>
+    </ClCompile>
+    <ClCompile Include="baseresult.cpp">
+      <Filter>Source Files\ManagerModule</Filter>
+    </ClCompile>
+    <ClCompile Include="missionmonitormodule.cpp">
+      <Filter>Source Files\MonitorModule</Filter>
+    </ClCompile>
+    <ClCompile Include="missionmonitorresult.cpp">
+      <Filter>Source Files\MonitorModule</Filter>
+    </ClCompile>
+    <ClCompile Include="missionmonitorwidget.cpp">
+      <Filter>Source Files\MonitorModule</Filter>
+    </ClCompile>
+    <ClCompile Include="auvrenderer.cpp">
+      <Filter>Source Files\MonitorModule\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="maptoolauv.cpp">
+      <Filter>Source Files\MonitorModule\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="auvinfopanel.cpp">
+      <Filter>Source Files\MonitorModule\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="elevationcanvas.cpp">
+      <Filter>Source Files\MapModule\ElevatioMap</Filter>
+    </ClCompile>
+    <ClCompile Include="elevationdata.cpp">
+      <Filter>Source Files\MapModule\ElevatioMap</Filter>
+    </ClCompile>
+    <ClCompile Include="MapModule\cmapcanvas.cpp">
+      <Filter>Source Files\MapModule\S57Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapModule\s57mapmodule.cpp">
+      <Filter>Source Files\MapModule\S57Map</Filter>
+    </ClCompile>
+    <ClCompile Include="tifmaptool.cpp">
+      <Filter>Header Files\MapModule\ElevationMap</Filter>
+    </ClCompile>
+    <ClCompile Include="tifmaptoolpan.cpp">
+      <Filter>Header Files\MapModule\ElevationMap</Filter>
+    </ClCompile>
+    <ClCompile Include="beaconcommunciationtaskediotor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="emptyeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="escapetaskeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="floatingcalibrationtaskeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="floatingcommunicationtaskediotr.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="patroldetecttaskeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="recoverytaskeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="sailtaskeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="shorebasedstriketaskeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="silenttaskeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="striketaskeditor.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="editormanager.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="missionnameutil.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskTool</Filter>
+    </ClCompile>
+    <ClCompile Include="tasksequenceserializer.cpp">
+      <Filter>Source Files\MissionPlanningModule\Task\TaskTool</Filter>
+    </ClCompile>
+    <ClCompile Include="datamodule.cpp">
+      <Filter>Source Files\DataManagerModule</Filter>
+    </ClCompile>
+    <ClCompile Include="bdsconfig.cpp">
+      <Filter>Source Files\CorrespondModule\ChannelConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="bdschannel.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="wateracousticconfig.cpp">
+      <Filter>Source Files\CorrespondModule\ChannelConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="wateracousticchannel.cpp">
+      <Filter>Source Files\CorrespondModule\CommunicationChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="controlparamsettingdialog.cpp">
+      <Filter>Source Files\ControlParamModule</Filter>
+    </ClCompile>
+    <ClCompile Include="controlparammodule.cpp">
+      <Filter>Source Files\ControlParamModule</Filter>
+    </ClCompile>
+    <ClCompile Include="sailcontrolmodule.cpp">
+      <Filter>Header Files\MainWindowModule</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="auvshorecontrol.ui">
+      <Filter>Form Files\MainWindowModule</Filter>
+    </QtUic>
+    <QtUic Include="communicationssettingdialog.ui">
+      <Filter>Form Files\CorrespondModule</Filter>
+    </QtUic>
+    <QtUic Include="devicemonitordialog.ui">
+      <Filter>Form Files\MonitorModule</Filter>
+    </QtUic>
+    <QtUic Include="taskmonitordialog.ui">
+      <Filter>Form Files\MonitorModule</Filter>
+    </QtUic>
+    <QtUic Include="dataquerydialog.ui">
+      <Filter>Form Files\DataManagerModule</Filter>
+    </QtUic>
+    <QtUic Include="datadownloaddialog.ui">
+      <Filter>Form Files\DataManagerModule</Filter>
+    </QtUic>
+    <QtUic Include="sailtaskeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="silenttaskeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="timeeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="patroldetecttaskeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="striketaskeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="shorebasedstriketaskeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="escapetaskeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="floatingcalibrationtaskeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="floatingcommunicationtaskediotr.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="beaconcommunciationtaskediotor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="recoverytaskeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Task</Filter>
+    </QtUic>
+    <QtUic Include="sailrestrictiondialog.ui">
+      <Filter>Form Files\MissionPlanningModule</Filter>
+    </QtUic>
+    <QtUic Include="missionview.ui">
+      <Filter>Header Files\MissionPlanningModule\Mission</Filter>
+    </QtUic>
+    <QtUic Include="planeditor.ui">
+      <Filter>Form Files\MissionPlanningModule\Plan</Filter>
+    </QtUic>
+    <QtUic Include="missionsettingdialog.ui">
+      <Filter>Form Files\MissionPlanningModule\Mission</Filter>
+    </QtUic>
+    <QtUic Include="unitssettingdialog.ui">
+      <Filter>Form Files\UnitsSettingModule</Filter>
+    </QtUic>
+    <QtUic Include="missionmonitorwidget.ui">
+      <Filter>Form Files\MonitorModule</Filter>
+    </QtUic>
+    <QtUic Include="selfcheckmaindialog.ui">
+      <Filter>Form Files\SelfCheckModule</Filter>
+    </QtUic>
+    <QtUic Include="controlparamsettingdialog.ui">
+      <Filter>Form Files\ControlParamModule</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="auvshorecontrol.h">
+      <Filter>Header Files\MainWindowModule</Filter>
+    </QtMoc>
+    <QtMoc Include="documentmodel.h">
+      <Filter>Header Files\MainWindowModule</Filter>
+    </QtMoc>
+    <QtMoc Include="filecontroller.h">
+      <Filter>Header Files\MainWindowModule</Filter>
+    </QtMoc>
+    <QtMoc Include="communicationssettingdialog.h">
+      <Filter>Header Files\CorrespondModule</Filter>
+    </QtMoc>
+    <QtMoc Include="devicemonitordialog.h">
+      <Filter>Header Files\MonitorModule</Filter>
+    </QtMoc>
+    <QtMoc Include="dataquerydialog.h">
+      <Filter>Header Files\DataManagerModule</Filter>
+    </QtMoc>
+    <QtMoc Include="datadownloaddialog.h">
+      <Filter>Header Files\DataManagerModule</Filter>
+    </QtMoc>
+    <QtMoc Include="timeeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task</Filter>
+    </QtMoc>
+    <QtMoc Include="sailrestrictiondialog.h">
+      <Filter>Header Files\MissionPlanningModule</Filter>
+    </QtMoc>
+    <QtMoc Include="missioncontroller.h">
+      <Filter>Header Files\MissionPlanningModule\Mission</Filter>
+    </QtMoc>
+    <QtMoc Include="missionmodel.h">
+      <Filter>Header Files\MissionPlanningModule\Mission</Filter>
+    </QtMoc>
+    <QtMoc Include="missionsettingdialog.h">
+      <Filter>Header Files\MissionPlanningModule\Mission</Filter>
+    </QtMoc>
+    <QtMoc Include="missiontreewidget.h">
+      <Filter>Header Files\MissionPlanningModule\Mission</Filter>
+    </QtMoc>
+    <QtMoc Include="missionview.h">
+      <Filter>Header Files\MissionPlanningModule\Mission</Filter>
+    </QtMoc>
+    <QtMoc Include="planeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Plan</Filter>
+    </QtMoc>
+    <QtMoc Include="communicationmanager.h">
+      <Filter>Header Files\CorrespondModule</Filter>
+    </QtMoc>
+    <QtMoc Include="communicationchannelbase.h">
+      <Filter>Header Files\CorrespondModule\CommunicationChannel</Filter>
+    </QtMoc>
+    <QtMoc Include="datasourceselector.h">
+      <Filter>Header Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </QtMoc>
+    <QtMoc Include="wirednetworkchannel.h">
+      <Filter>Header Files\CorrespondModule\CommunicationChannel</Filter>
+    </QtMoc>
+    <QtMoc Include="wirelessnetworkchannel.h">
+      <Filter>Header Files\CorrespondModule\CommunicationChannel</Filter>
+    </QtMoc>
+    <QtMoc Include="radiochannel.h">
+      <Filter>Header Files\CorrespondModule\CommunicationChannel</Filter>
+    </QtMoc>
+    <QtMoc Include="basemodule.h">
+      <Filter>Header Files\ManagerModule</Filter>
+    </QtMoc>
+    <QtMoc Include="messagedispatcher.h">
+      <Filter>Header Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </QtMoc>
+    <QtMoc Include="timestampprocessor.h">
+      <Filter>Header Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </QtMoc>
+    <QtMoc Include="communicationmodule.h">
+      <Filter>Header Files\CorrespondModule</Filter>
+    </QtMoc>
+    <QtMoc Include="selfcheckmodule.h">
+      <Filter>Header Files\SelfCheckModule</Filter>
+    </QtMoc>
+    <QtMoc Include="configworker.h">
+      <Filter>Header Files\CorrespondModule</Filter>
+    </QtMoc>
+    <QtMoc Include="unitssettingdialog.h">
+      <Filter>Header Files\UnitsSettingModule</Filter>
+    </QtMoc>
+    <QtMoc Include="taskmonitordialog.h">
+      <Filter>Header Files\SelfCheckModule</Filter>
+    </QtMoc>
+    <QtMoc Include="selfcheckmaindialog.h">
+      <Filter>Header Files\SelfCheckModule</Filter>
+    </QtMoc>
+    <QtMoc Include="missionmonitormodule.h">
+      <Filter>Header Files\MonitorModule</Filter>
+    </QtMoc>
+    <QtMoc Include="missionmonitorwidget.h">
+      <Filter>Header Files\MonitorModule</Filter>
+    </QtMoc>
+    <QtMoc Include="auvrenderer.h">
+      <Filter>Header Files\MonitorModule\Renderer</Filter>
+    </QtMoc>
+    <QtMoc Include="maptoolauv.h">
+      <Filter>Header Files\MonitorModule\Renderer</Filter>
+    </QtMoc>
+    <QtMoc Include="auvinfopanel.h">
+      <Filter>Header Files\MonitorModule\Renderer</Filter>
+    </QtMoc>
+    <QtMoc Include="elevationcanvas.h">
+      <Filter>Header Files\MapModule\ElevationMap</Filter>
+    </QtMoc>
+    <QtMoc Include="MapModule\cmapcanvas.h">
+      <Filter>Header Files\MapModule\S57Map</Filter>
+    </QtMoc>
+    <QtMoc Include="MapModule\s57mapmodule.h">
+      <Filter>Header Files\MapModule\S57Map</Filter>
+    </QtMoc>
+    <QtMoc Include="tifmaptool.h">
+      <Filter>Header Files\MapModule\ElevationMap</Filter>
+    </QtMoc>
+    <QtMoc Include="tifmaptoolpan.h">
+      <Filter>Header Files\MapModule\ElevationMap</Filter>
+    </QtMoc>
+    <QtMoc Include="beaconcommunciationtaskediotor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="emptyeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="editormanager.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="escapetaskeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="floatingcalibrationtaskeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="floatingcommunicationtaskediotr.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="itaskeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="patroldetecttaskeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="recoverytaskeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="sailtaskeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="shorebasedstriketaskeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="silenttaskeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="striketaskeditor.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="datamodule.h">
+      <Filter>Header Files\DataManagerModule</Filter>
+    </QtMoc>
+    <QtMoc Include="bdschannel.h">
+      <Filter>Header Files\CorrespondModule\CommunicationChannel</Filter>
+    </QtMoc>
+    <QtMoc Include="wateracousticchannel.h">
+      <Filter>Header Files\CorrespondModule\CommunicationChannel</Filter>
+    </QtMoc>
+    <QtMoc Include="controlparamsettingdialog.h">
+      <Filter>Header Files\ControlParamModule</Filter>
+    </QtMoc>
+    <QtMoc Include="controlparammodule.h">
+      <Filter>Header Files\ControlParamModule</Filter>
+    </QtMoc>
+    <QtMoc Include="sailcontrolmodule.h">
+      <Filter>Header Files\MainWindowModule</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task.h">
+      <Filter>Header Files\MissionPlanningModule\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="mission.h">
+      <Filter>Header Files\MissionPlanningModule\Mission</Filter>
+    </ClInclude>
+    <ClInclude Include="plan.h">
+      <Filter>Header Files\MissionPlanningModule\Plan</Filter>
+    </ClInclude>
+    <ClInclude Include="channelconfig.h">
+      <Filter>Header Files\CorrespondModule\ChannelConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="radioconfig.h">
+      <Filter>Header Files\CorrespondModule\ChannelConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="wirednetworkconfig.h">
+      <Filter>Header Files\CorrespondModule\ChannelConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="satelliteconfig.h">
+      <Filter>Header Files\CorrespondModule\ChannelConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="datafilter.h">
+      <Filter>Header Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="wirelessnetworkconfig.h">
+      <Filter>Header Files\CorrespondModule\ChannelConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="moduleenum.h">
+      <Filter>Header Files\ManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="messagetype.h">
+      <Filter>Header Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="dispatchstrategies.h">
+      <Filter>Header Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="communicationchannel.h">
+      <Filter>Header Files\CorrespondModule\CommunicationChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFactory.h">
+      <Filter>Header Files\ManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="frame.h">
+      <Filter>Header Files\SelfCheckModule\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="framebuilder.h">
+      <Filter>Header Files\SelfCheckModule\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="frameparser.h">
+      <Filter>Header Files\SelfCheckModule\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="selfcheckdevice.h">
+      <Filter>Header Files\SelfCheckModule</Filter>
+    </ClInclude>
+    <ClInclude Include="selfcheckresult.h">
+      <Filter>Header Files\SelfCheckModule</Filter>
+    </ClInclude>
+    <ClInclude Include="datamessage.h">
+      <Filter>Header Files\CorrespondModule\CommunicationDataCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="baseresult.h">
+      <Filter>Header Files\ManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="moduledialogbase.h">
+      <Filter>Header Files\ManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="observer.h">
+      <Filter>Header Files\ManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="missionmonitorresult.h">
+      <Filter>Header Files\MonitorModule</Filter>
+    </ClInclude>
+    <ClInclude Include="mission_monitor_types.h">
+      <Filter>Header Files\MonitorModule</Filter>
+    </ClInclude>
+    <ClInclude Include="elevationdata.h">
+      <Filter>Header Files\MapModule\ElevationMap</Filter>
+    </ClInclude>
+    <ClInclude Include="frameglobal.h">
+      <Filter>Header Files\SelfCheckModule\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="missionenum.h">
+      <Filter>Header Files\MissionPlanningModule\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="missionnameutil.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskTool</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksequenceserializer.h">
+      <Filter>Header Files\MissionPlanningModule\Task\TaskTool</Filter>
+    </ClInclude>
+    <ClInclude Include="communicationchannelstatusresult.h">
+      <Filter>Header Files\CorrespondModule</Filter>
+    </ClInclude>
+    <ClInclude Include="module_style_helper.h">
+      <Filter>Header Files\MainWindowModule</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpsupportinterface.h">
+      <Filter>Header Files\CorrespondModule\CommunicationChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="dataresult.h">
+      <Filter>Header Files\DataManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="ftploginlistresult.h">
+      <Filter>Header Files\DataManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="ftptransferresult.h">
+      <Filter>Header Files\DataManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="cameramediaseq.h">
+      <Filter>Header Files\SelfCheckModule\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="commandparameter.h">
+      <Filter>Header Files\SelfCheckModule\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="crccalculator.h">
+      <Filter>Header Files\SelfCheckModule\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="selfcheckenum.h">
+      <Filter>Header Files\SelfCheckModule\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="selfchecksendresult.h">
+      <Filter>Header Files\SelfCheckModule</Filter>
+    </ClInclude>
+    <ClInclude Include="bdsconfig.h">
+      <Filter>Header Files\CorrespondModule\ChannelConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="devicepage.h">
+      <Filter>Header Files\SelfCheckModule\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="internalprotocoladapter.h">
+      <Filter>Header Files\SelfCheckModule\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="BeidouATAdapter .h">
+      <Filter>Header Files\SelfCheckModule\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="beidouATcommandmapper.h">
+      <Filter>Header Files\SelfCheckModule\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="insparse.h">
+      <Filter>Header Files\SelfCheckModule\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="wateracousticconfig.h">
+      <Filter>Header Files\CorrespondModule\ChannelConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpprogressresult.h">
+      <Filter>Header Files\DataManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpdeleteresult.h">
+      <Filter>Header Files\DataManagerModule</Filter>
+    </ClInclude>
+    <ClInclude Include="commonenum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlparamdefs.h">
+      <Filter>Header Files\ControlParamModule</Filter>
+    </ClInclude>
+    <ClInclude Include="controlparamresult.h">
+      <Filter>Header Files\ControlParamModule</Filter>
+    </ClInclude>
+    <ClInclude Include="enumconverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sailcontroldefs.h">
+      <Filter>Header Files\MainWindowModule</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

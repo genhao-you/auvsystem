@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files\renderer">
+      <UniqueIdentifier>{475d320d-c53f-4d61-9b6f-ea1cd0f1419c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderer">
+      <UniqueIdentifier>{a766fca6-5502-4bc8-92b2-e09c6998b322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\viewport">
+      <UniqueIdentifier>{ac6a1d59-aa35-4017-9a37-cc5b49b92a1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\projection">
+      <UniqueIdentifier>{8e028141-8177-4dbd-b994-98639e4d35d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\viewport">
+      <UniqueIdentifier>{20f550b0-79c8-4727-bdfb-2e0042b16670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\projection">
+      <UniqueIdentifier>{a04bfd19-86b7-45e9-8bac-ff968f9e0809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\common">
+      <UniqueIdentifier>{812c099b-86d7-4b02-9e3a-d819af291518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{b58d1986-248d-435d-8d29-34df1b67136b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\geometry">
+      <UniqueIdentifier>{dfd186b9-e8e5-4aea-8150-5d2dd393b182}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\geometry">
+      <UniqueIdentifier>{28134c2f-43b3-4471-949c-ef162567854d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gpc">
+      <UniqueIdentifier>{a4530471-e541-457b-a18a-f4045d953836}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gpc">
+      <UniqueIdentifier>{96c61e27-aa12-420c-af1b-e3aab7bdaac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\linebuffer">
+      <UniqueIdentifier>{e3b90ca9-8135-4fa2-8d47-1361255e2170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\linebuffer">
+      <UniqueIdentifier>{213f84d7-2c3f-41e5-b34d-f555a301874e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="cs57annotation.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57auxiliaryrenderer.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57highlight.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57renderer.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="projection\cs57projection.h">
+      <Filter>Header Files\projection</Filter>
+    </ClInclude>
+    <ClInclude Include="viewport\cs57viewport.h">
+      <Filter>Header Files\viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xt_global.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\dpi.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\sysIni.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="cline.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="gemotry\crectangle.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cs57transform.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="historyini.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="xt_define.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="gpc\gpc.h">
+      <Filter>Header Files\gpc</Filter>
+    </ClInclude>
+    <ClInclude Include="gpcpolygon.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="linebuffer\coordinate.h">
+      <Filter>Header Files\linebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="linebuffer\mathtool.h">
+      <Filter>Header Files\linebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="linebuffer\pointbuffer.h">
+      <Filter>Header Files\linebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="linebuffer\polylinebuffer.h">
+      <Filter>Header Files\linebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57symbol.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="cpolylineclip.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="codec.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="gemotry\spatialpolygon.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cs57annotation.cpp">
+      <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57auxiliaryrenderer.cpp">
+      <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57highlight.cpp">
+      <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57renderer.cpp">
+      <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57symbol.cpp">
+      <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="projection\cs57projection.cpp">
+      <Filter>Source Files\projection</Filter>
+    </ClCompile>
+    <ClCompile Include="viewport\cs57viewport.cpp">
+      <Filter>Source Files\viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="common\dpi.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\sysIni.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\cs57transform.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="historyini.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="gpc\gpc.c">
+      <Filter>Source Files\gpc</Filter>
+    </ClCompile>
+    <ClCompile Include="gpcpolygon.cpp">
+      <Filter>Source Files\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="linebuffer\coordinate.cpp">
+      <Filter>Source Files\linebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="linebuffer\mathtool.cpp">
+      <Filter>Source Files\linebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="linebuffer\pointbuffer.cpp">
+      <Filter>Source Files\linebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="linebuffer\polylinebuffer.cpp">
+      <Filter>Source Files\linebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="cpolylineclip.cpp">
+      <Filter>Source Files\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="gemotry\spatialpolygon.cpp">
+      <Filter>Source Files\geometry</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

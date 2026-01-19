@@ -1,0 +1,96 @@
+/* AuvInfoPanel主面板样式 */
+QWidget#AuvInfoPanel {
+    background-color: #121212; /* 深黑背景，与主界面一致 */
+    border: 1px solid #444444; /* 深色边框 */
+    border-radius: 8px; /* 圆角风格统一 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* 深色阴影更明显 */
+}
+
+/* 通用标签样式 */
+QLabel {
+    font-family: "Source Han Sans CN", "Consolas", "Monaco", "Courier New";
+    font-size: 8.5pt; /* 与主界面字体大小一致 */
+    color: #a9b7c6; /* 浅灰色文字 */
+    background-color: transparent;
+}
+
+/* 标题标签样式 */
+QLabel#titleLabel {
+    font-weight: bold;
+    color: #e67e22; /* 橙色强调色 */
+    border-bottom: 1px solid #444444; /* 深色分隔线 */
+    padding-bottom: 6px;
+    margin-right: 30px; /* 给关闭按钮留空间 */
+    min-height: 24px;
+}
+
+/* 键标签样式 */
+QLabel[label="true"] {
+    color: #e67e22; /* 橙色键名 */
+    font-weight: 500;
+}
+
+/* 值标签样式 */
+QLabel[value="true"] {
+    color: #a9b7c6; /* 浅灰色值 */
+    selection-background-color: #e67e22; /* 选中背景色 */
+    selection-color: #000000; /* 选中文字色 */
+}
+
+/* 滚动区域样式 */
+QScrollArea {
+    border: none;
+    background-color: transparent;
+}
+
+QScrollArea QWidget {
+    background-color: transparent;
+}
+
+/* 滚动条样式（与主界面一致） */
+QScrollBar:vertical {
+    width: 8px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #444444;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #e67e22; /* 悬浮橙色 */
+}
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* 关闭按钮样式 */
+QPushButton#CloseBtn {
+    border: none;
+    background-color: transparent;
+    color: #a9b7c6; /* 浅灰色图标 */
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+}
+
+QPushButton#CloseBtn:hover {
+    color: #e67e22; /* 悬浮橙色 */
+    background-color: #2a2a2a; /* 深色悬浮背景 */
+}
+
+QPushButton#CloseBtn:pressed {
+    background-color: #333333;
+}
+
+/* 表单布局间距优化 */
+QGridLayout {
+    spacing: 4px;
+}

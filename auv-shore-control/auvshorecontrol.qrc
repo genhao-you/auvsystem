@@ -1,0 +1,109 @@
+<RCC>
+    <qresource prefix="/icon/menubar">
+        <file>icon/menubar/a-bianzu19.png</file>
+        <file>icon/menubar/bianji_3.png</file>
+        <file>icon/menubar/data-Inquire_2.png</file>
+        <file>icon/menubar/lishiguiji_8.png</file>
+        <file>icon/menubar/Maps.png</file>
+        <file>icon/menubar/shebeiweizhi_2.png</file>
+        <file>icon/menubar/shebeizhuangtai.png</file>
+        <file>icon/menubar/shujuxiazai_1.png</file>
+        <file>icon/menubar/tongxinshezhi.png</file>
+        <file>icon/menubar/a-xinjian3.png</file>
+        <file>icon/menubar/baocun.png</file>
+        <file>icon/menubar/dakai.png</file>
+        <file>icon/menubar/jihuakongzhitai.png</file>
+        <file>icon/menubar/jiufuqianbaoicon09.png</file>
+        <file>icon/menubar/lingcunwei.png</file>
+        <file>icon/menubar/renwu_1.png</file>
+        <file>icon/menubar/renwu_5.png</file>
+        <file>icon/menubar/edit_setting.png</file>
+        <file>icon/menubar/missionMenu.png</file>
+    </qresource>
+    <qresource prefix="/icon/selfcheck">
+        <file>icon/selfcheck/bug.png</file>
+        <file>icon/selfcheck/running.png</file>
+        <file>icon/selfcheck/warning.png</file>
+        <file>icon/selfcheck/shebeizijian_1.png</file>
+        <file>icon/selfcheck/shebeizhuangtai-yunhang.png</file>
+        <file>icon/selfcheck/shuxingjiahao.png</file>
+        <file>icon/selfcheck/shuxingjianhao.png</file>
+        <file>icon/selfcheck/设备状态-运行.png</file>
+        <file>icon/selfcheck/fail.png</file>
+        <file>icon/selfcheck/success.png</file>
+        <file>icon/selfcheck/uninitial.png</file>
+        <file>icon/selfcheck/wait.png</file>
+    </qresource>
+    <qresource prefix="/icon/plantoolbar">
+        <file>icon/plantoolbar/implement.png</file>
+        <file>icon/plantoolbar/issue.png</file>
+        <file>icon/plantoolbar/missionPreview.png</file>
+        <file>icon/plantoolbar/stop.png</file>
+    </qresource>
+    <qresource prefix="/icon/mapeditbar">
+        <file>icon/mapeditbar/auv_query.png</file>
+        <file>icon/mapeditbar/translate.png</file>
+        <file>icon/mapeditbar/zoomIn.png</file>
+        <file>icon/mapeditbar/zoomOut.png</file>
+        <file>icon/mapeditbar/mapMenu.png</file>
+    </qresource>
+    <qresource prefix="/icon/missionlist">
+        <file>icon/missionlist/shuxing.png</file>
+        <file>icon/missionlist/shuxingxian.png</file>
+        <file>icon/missionlist/shuxingzhankai.png</file>
+        <file>icon/missionlist/xinjianrenwu_1.png</file>
+        <file>icon/missionlist/mission.png</file>
+        <file>icon/missionlist/mission_completed.png</file>
+        <file>icon/missionlist/missioning.png</file>
+    </qresource>
+    <qresource prefix="/icon/communication">
+        <file>icon/communication/tongxinshezhi.png</file>
+        <file>icon/communication/connected.png</file>
+        <file>icon/communication/disconnected.png</file>
+        <file>icon/communication/initializing.png</file>
+    </qresource>
+    <qresource prefix="/icon/monitor">
+        <file>icon/monitor/shebeizhuangtai-guzhang.png</file>
+        <file>icon/monitor/shebeizhuangtai-yunhang.png</file>
+        <file>icon/monitor/设备状态-运行.png</file>
+        <file>icon/monitor/shebeizhuangtai.png</file>
+        <file>icon/monitor/a-bianzu19.png</file>
+        <file>icon/monitor/renwu_1.png</file>
+        <file>icon/monitor/error.png</file>
+        <file>icon/monitor/initial.png</file>
+        <file>icon/monitor/run.png</file>
+        <file>icon/monitor/off.png</file>
+        <file>icon/monitor/on.png</file>
+        <file>icon/monitor/editpanel.png</file>
+        <file>icon/monitor/taskpanel.png</file>
+        <file>icon/monitor/monitor.png</file>
+    </qresource>
+    <qresource prefix="/icon/dataquery">
+        <file>icon/dataquery/bg-backward.png</file>
+        <file>icon/dataquery/bg-forward.png</file>
+        <file>icon/dataquery/bofang.png</file>
+        <file>icon/dataquery/chazhao_3.png</file>
+        <file>icon/dataquery/a-4-2yuyan-yuyanyuanguanli.png</file>
+    </qresource>
+    <qresource prefix="/icon/tasktoolbar">
+        <file>icon/tasktoolbar/baocun_3.png</file>
+        <file>icon/tasktoolbar/shanchurenwu_3.png</file>
+        <file>icon/tasktoolbar/xinjianrenwu_5.png</file>
+    </qresource>
+    <qresource prefix="/icon/sailtoolbar">
+        <file>icon/sailtoolbar/quanxianxianzhi_1.png</file>
+    </qresource>
+    <qresource prefix="/icon/mainwindow">
+        <file>icon/mainwindow/logo.png</file>
+    </qresource>
+    <qresource prefix="/icon/controlparamsetting">
+        <file>icon/controlparamsetting/arrow_down_orange.png</file>
+        <file>icon/controlparamsetting/arrow_down_white.png</file>
+        <file>icon/controlparamsetting/arrow_up_orange.png</file>
+        <file>icon/controlparamsetting/arrow_up_white.png</file>
+        <file>icon/controlparamsetting/fail.png</file>
+        <file>icon/controlparamsetting/success.png</file>
+        <file>icon/controlparamsetting/uninitial.png</file>
+        <file>icon/controlparamsetting/debugging.png</file>
+    </qresource>
+</RCC>

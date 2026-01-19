@@ -1,0 +1,369 @@
+/* ================================= 数据下载界面QSS（与主界面样式统一） ================================= */
+/* 核心原则：复用主界面AMOLED纯黑基调、橙色强调色、统一控件样式，补充专属控件适配 */
+
+/* ================================= 1. 全局基础样式（完全复用主界面核心规则） ================================= */
+/* 主窗口容器 */
+QDialog#DataDownloadDialogClass {
+    background-color: #000000; /* 主界面纯黑背景 */
+    border: 1px solid #333333; /* 主界面统一边框色 */
+    border-radius: 8px; /* 主界面统一圆角 */
+    min-width: 2000px; /* 根据实际布局设置最小窗口宽度 */
+    min-height: 1200px; 
+}
+
+/* 全局字体统一（适配工业显控紧凑布局） */
+QLabel, QPushButton, QLineEdit, QGroupBox, QProgressBar, QTreeView, QTableWidget, QHeaderView {
+    font-family: "Source Han Sans CN";
+    font-size: 8.5pt; /* 主界面统一字体大小 */
+    line-height: 1.6; /* 避免文字重叠 */
+}
+
+/* ================================= 2. 分组框样式（复用主界面分组框规则） ================================= */
+QGroupBox {
+    border: 1px solid #333333;
+    border-radius: 6px;
+    margin-top: 15px;
+    padding: 10px;
+    color: #e67e22; /* 主界面强调色（橙色） */
+    font-weight: 600;
+    background-color: #000000;
+}
+
+QGroupBox::title {
+    background-color: #000000; /* 纯黑背景覆盖下方元素 */
+    padding: 5px 12px;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    font-size: 9pt; /* 略大于基础字体，保持层级 */
+    color: #e67e22;
+    top: -12px; /* 主界面统一标题偏移 */
+    left: 15px;
+}
+
+/* ================================= 3. 输入框样式（复用主界面QLineEdit规则） ================================= */
+QLineEdit {
+    background-color: #121212; /* 主界面控件深黑背景 */
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 3px 8px;
+    min-height: 28px; /* 主界面统一控件高度 */
+    max-height: none;
+    color: #a9b7c6; /* 主界面浅灰文字色 */
+    selection-background-color: #e67e22; /* 选中态橙色背景 */
+    selection-color: #000000; /* 选中态黑色文字 */
+}
+
+QLineEdit:focus {
+    border-color: #e67e22; /* 焦点态橙色边框 */
+    background-color: #1a1a1a; /* 焦点态稍亮背景 */
+}
+
+/* ================================= 4. 按钮样式（复用主界面QPushButton核心规则） ================================= */
+QPushButton {
+    color: #a9b7c6;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #222222, stop:1 #111111); /* 主界面按钮渐变 */
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 3px 12px;
+    min-height: 28px;
+    max-height: 28px;
+    min-width: 80px; /* 适配下载界面按钮尺寸 */
+    font-size: 8.5pt;
+}
+
+QPushButton:hover {
+    border-color: #e67e22;
+    color: #ffffff;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #2a2a2a, stop:1 #1a1a1a);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618); /* 按下态橙色渐变 */
+    color: #000000;
+    border-color: #ff9933;
+}
+
+QPushButton:disabled {
+    background: #1a1a1a; /* 禁用态深黑背景 */
+    color: #666666; /* 禁用态灰色文字 */
+    border-color: #333333;
+}
+
+/* ================================= 5. 标签样式（复用主界面QLabel规则） ================================= */
+QLabel {
+    font-family: "黑体", "Microsoft YaHei", sans-serif;
+    font-size: 8.5pt;
+    color: #a9b7c6;
+    background-color: transparent;
+    min-height: 28px; /* 避免文字贴边 */
+    max-height: none;
+    padding: 3px 6px;
+}
+
+/* 状态标签专属样式（适配UI的状态提示） */
+QLabel#label_Status {
+    color: #666; /* 主界面状态文字浅灰 */
+    background-color: transparent;
+}
+
+/* ================================= 6. 文件树视图样式（QTreeView） ================================= */
+QTreeView {
+    background-color: #121212; /* 与输入框背景统一 */
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: #a9b7c6; /* 统一所有节点文字颜色 */
+    alternate-background-color: #1a1a1a;
+    outline: none; /* 去除焦点虚线框 */
+}
+
+/* 所有节点样式（包括顶级节点） */
+QTreeView::item {
+    height: 22px; /* 减小行高，解决高度过高问题 */
+    padding: 2px 4px;
+    color: #a9b7c6; /* 强制所有节点使用统一文字颜色 */
+    background-color: transparent; /* 透明背景，继承父容器颜色 */
+}
+
+/* 悬浮状态 */
+QTreeView::item:hover {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* 选中状态（包括顶级节点） */
+QTreeView::item:selected {
+    background-color: #e67e22;
+    color: #000000;
+}
+
+/* 确保选中状态的文字颜色生效 */
+QTreeView::item:selected:active {
+    color: #000000;
+}
+
+QTreeView::item:selected:!active {
+    color: #000000;
+}
+
+/* 分支线样式 - 隐藏默认分支线，减少视觉干扰 */
+QTreeView::branch {
+    background-color: transparent;
+}
+
+QTreeView::branch:open,
+QTreeView::branch:closed {
+    border-image: none;
+    image: none; /* 隐藏展开/折叠图标，节省宽度 */
+}
+
+/* 表头样式（如果有） */
+QTreeView::header {
+    background-color: #121212;
+    border: none;
+}
+
+QTreeView::header::section {
+    background-color: #121212;
+    color: #a9b7c6;
+    border: none;
+    border-bottom: 1px solid #333333;
+    padding: 4px;
+}
+
+/* ================================= 7. 表格视图样式（QTableWidget）- 新增样式 ================================= */
+QTableWidget {
+    background-color: #121212; /* 与TreeView背景统一 */
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: #a9b7c6; /* 统一文字颜色 */
+    alternate-background-color: #1a1a1a; /* 隔行变色 */
+    gridline-color: #222222; /* 网格线颜色 */
+    outline: none; /* 去除焦点虚线框 */
+    selection-background-color: #e67e22; /* 选中背景色 */
+    selection-color: #000000; /* 选中文字颜色 */
+}
+
+/* 表格单元格样式 */
+QTableWidget::item {
+    padding: 4px 6px;
+    border: none;
+    color: #a9b7c6;
+}
+
+/* 单元格悬浮状态 */
+QTableWidget::item:hover {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* 单元格选中状态 */
+QTableWidget::item:selected {
+    background-color: #e67e22;
+    color: #000000;
+}
+
+/* 禁用状态单元格 */
+QTableWidget::item:disabled {
+    color: #666666;
+    background-color: #121212;
+}
+
+/* 表格水平表头样式 */
+QHeaderView::section {
+    background-color: #1a1a1a; /* 表头背景色 */
+    color: #a9b7c6; /* 表头文字颜色 */
+    border: none;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #222222;
+    padding: 6px;
+    font-weight: 600;
+}
+
+/* 表头最后一列去除右边框 */
+QHeaderView::section:last {
+    border-right: none;
+}
+
+/* 表头悬浮状态 */
+QHeaderView::section:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* 表头按下状态 */
+QHeaderView::section:pressed {
+    background-color: #e67e22;
+    color: #000000;
+}
+
+/* 垂直表头（行号）样式 */
+QHeaderView::section:vertical {
+    background-color: #1a1a1a;
+    color: #a9b7c6;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #222222;
+}
+
+/* 隐藏垂直表头（行号） */
+QTableWidget QHeaderView::vertical {
+    visibility: collapse;
+}
+
+/* ================================= 8. 传输进度条样式 ================================= */
+QProgressBar#progressBar_Transfer {
+    border: 1px solid #444444;
+    border-radius: 4px;
+    text-align: center;
+    height: 20px; /* 主界面统一进度条高度 */
+    background-color: #121212;
+    color: #a9b7c6;
+    font-size: 7.6pt; /* 缩小文本，避免溢出 */
+    line-height: 20px; /* 垂直居中 */
+}
+
+QProgressBar#progressBar_Transfer::chunk {
+    border-radius: 3px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+                                stop:0 #e67e22, stop:1 #c06618); /* 主界面橙色渐变 */
+}
+
+/* ================================= 9. 分组框专属优化（适配下载界面布局） ================================= */
+/* 服务器配置分组框 */
+QGroupBox#grp_Connect {
+    background-color: #0a0a0a; /* 主界面功能分组框背景 */
+    border-color: #444444;
+    margin-top: 10px;
+}
+
+QGroupBox#grp_Connect QGridLayout {
+    margin-top: 10px;
+    vertical-spacing: 12px; /* 适配用户名/密码行间距 */
+    horizontal-spacing: 10px;
+}
+
+/* 本地/远程文件分组框 */
+QGroupBox#groupBox_Local,
+QGroupBox#groupBox_Remote {
+    background-color: #0a0a0a;
+    border-color: #444444;
+    margin-top: 10px;
+}
+
+QGroupBox#groupBox_Local QVBoxLayout,
+QGroupBox#groupBox_Remote QVBoxLayout {
+    spacing: 8px; /* 主界面统一布局间距 */
+}
+
+/* 操作按钮组布局（垂直居中+合理间距） */
+QVBoxLayout#verticalLayout_Operate {
+    spacing: 15px; /* 按钮之间间距 */
+    alignment: AlignCenter; /* 垂直居中排列 */
+}
+
+/* ================================= 10. 滚动条样式（复用主界面统一规则） ================================= */
+QScrollBar:horizontal {
+    max-height: 12px;
+    background-color: #000000;
+    border: 1px solid #333333;
+    margin: 0px 18px 0 18px;
+}
+
+QScrollBar::handle:horizontal {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    border-radius: 6px;
+    min-width: 30px;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    border: 1px solid #333333;
+    background-color: #111111;
+    width: 16px;
+}
+
+QScrollBar::add-line:horizontal:hover,
+QScrollBar::sub-line:horizontal:hover {
+    background-color: #222222;
+    border-color: #e67e22;
+}
+
+QScrollBar::add-page:horizontal, 
+QScrollBar::sub-page:horizontal {
+    background-color: transparent;
+}
+
+QScrollBar:vertical {
+    max-width: 12px;
+    background-color: #000000;
+    border: 1px solid #333333;
+    margin: 18px 0 18px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    border-radius: 6px;
+    min-height: 30px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    border: 1px solid #333333;
+    background-color: #111111;
+    height: 16px;
+}
+
+QScrollBar::add-line:vertical:hover,
+QScrollBar::sub-line:vertical:hover {
+    background-color: #222222;
+    border-color: #e67e22;
+}
+
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical {
+    background-color: transparent;
+}

@@ -1,0 +1,934 @@
+/* ================================= 全局基础样式（AMOLED核心风格） ================================= */
+/* 主窗口与核心容器 */
+QMainWindow#auvshorecontrolClass {
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    min-width: 2500px; /* 根据实际布局设置最小窗口宽度 */
+    min-height: 1500px; 
+   }
+QWidget#centralWidget {
+    background-color: #000000;
+}
+
+/* 全局字体统一（8.5pt，适配工业显控紧凑布局） */
+QLabel, QPushButton, QCheckBox, QLineEdit, QTextEdit, QGroupBox, QProgressBar {
+    font-family: "Source Han Sans CN";
+    font-size: 8.5pt;   
+    line-height: 1.6; /* 关键：行高设为1.5倍，适配换行文字，避免行重叠 */
+}
+
+/* ================================= 全局标签优化 ================================= */
+QLabel {
+    font-family: "黑体", "Microsoft YaHei", sans-serif;
+    font-size: 8.5pt; /* 基础标签字体同步缩小 */
+    color: #a9b7c6;
+    background-color: transparent;
+    min-height: 28px; /* 增大最小高度，容纳换行文字（原20px） */
+    max-height: none; /* 取消最大高度限制，允许自动换行后撑开 */
+    padding: 3px 6px; /* 增加内边距，避免文字贴边被截断 */
+   }
+
+/* 分组框标题（略大1pt，保持层级，从13pt降至11pt） */
+QGroupBox::title {
+    background-color: #000000;
+    padding: 5px 12px;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    font-size: 9pt;
+    color: #e67e22;
+    top: -12px;
+    left: 15px;
+}
+
+/* ================================= 标签样式（分功能定制） ================================= */
+/* 基础标签（AMOLED灰调，统一字体大小） */
+QLabel {
+    color: #a9b7c6;
+     background-color: #000000;
+}
+
+/* 数据值标签（传感器/电池数据，字体10pt，确保不溢出） */
+QLabel#lblPowerVoltageVal,
+QLabel#lblPowerCurrentVal,
+QLabel#lblPowerTempVal,
+QLabel#lblInstrumentVoltageVal,
+QLabel#lblInstrumentCurrentVal,
+QLabel#lblInstrumentTempVal,
+QLabel#lblGpsVal,
+QLabel#lblInertialNavVal,
+QLabel#lblCombinedInertialVal,
+QLabel#lblRelativeCoordVal,
+QLabel#lblCtdVal,
+QLabel#lblObstacleSonarVal,
+QLabel#lblRudderVal,
+QLabel#lblHatchAngleVal,
+QLabel#lblAltimeterVal,
+QLabel#lblMissionStatusVal,
+QLabel#lblCommandConfirmVal,
+QLabel#lblDepthDisplay {
+    min-width: 80px;
+ 
+    text-align: right;
+    padding: 3px 8px;
+    background-color: #121212;
+    border: 1px solid #333333;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 8.5pt; /* 明确字体大小，避免继承过大值 */
+   min-height: 30px; /* 增大高度，容纳可能的换行数值 */
+}
+/* ================================= grpAuvStatus分组框专属优化 ================================= */
+/* 1. 调整分组框标题位置与样式（仅影响grpAuvStatus） */
+QGroupBox#grpAuvStatus::title {
+    top: -6px; /* 进一步减少上移距离（比默认分组框更靠下） */
+    left: 18px; /* 向右微调，远离左侧边框 */
+    padding: 6px 14px; /* 增大标题内边距，提升视觉权重 */
+    background-color: #000000; /* 纯黑背景完全覆盖下方元素 */
+    border: 1px solid #555555; /* 加深边框，强化隔离感 */
+   }
+
+/* 2. 增大分组框内部顶部间距（仅grpAuvStatus） */
+QGroupBox#grpAuvStatus {
+    padding-top: 28px !important; /* 比普通分组框多留3px，专门适配告警标签高度 */
+    margin-top: 20px; /* 与上方元素保持距离，避免整体上移 */
+    border-color: #444444; /* 边框颜色略深，区分于其他分组框 */
+   min-height: 65px; /* 增大高度，容纳可能的换行数值 */
+
+}
+
+/* 3. 告警标签与分组框顶部的强制隔离（仅grpAuvStatus内的标签） */
+QGroupBox#grpAuvStatus QLabel#lblAuvAlert,
+QGroupBox#grpAuvStatus QLabel#lblAuvFault {
+    margin-top: 10px !important; /* 比普通标签多2px顶部外边距 */
+    margin-left: 6px; /* 与左侧边框保持距离，避免贴边 */
+    margin-right: 6px; /* 与右侧边框保持距离 */
+}
+
+/* 4. 修正分组框内部布局的顶部偏移 */
+QGroupBox#grpAuvStatus > QLayout {
+    margin-top: 5px; /* 抵消布局自身的负向偏移 */
+}
+/* 告警与状态标签（字体缩小，保持醒目） */
+QLabel#lblAuvAlert {
+    color: #ff4444;
+    font-weight: 600;
+    font-size: 8.5pt; 
+    min-height: 30px;
+    min-width: 100px; /* 强制最小宽度，避免窄屏挤压（根据实际场景调整） */
+    max-width: none; /* 取消最大宽度限制，允许文本撑开 */
+    width: auto; /* 宽度自适应内容 */
+    padding: 6px 10px; /* 增加内边距（原4px 6px），避免文字贴边被截断 */
+    white-space: normal; /* 强制允许自动换行 */
+    background-color: rgba(255, 68, 68, 0.1); /* 轻微红色背景，既醒目又不破坏AMOLED风格 */
+    border: 1px solid rgba(255, 68, 68, 0.3); /* 红色边框强化告警视觉 */
+    border-radius: 4px; /* 圆角适配整体风格 */
+   }
+/* 确保告警标签不会被兄弟元素挤压 */
+QLabel#lblAuvAlert + * {
+    margin-left: 10px; /* 与右侧元素保持距离 */
+}
+QLabel#lblAuvFault {
+    color: #4CAF50;
+    font-weight: 500;
+    background-color: #121212;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 8.5pt;
+    min-height: 30px;
+    min-width: 100px; /* 强制最小宽度，避免窄屏挤压（根据实际场景调整） */
+    max-width: none; /* 取消最大宽度限制，允许文本撑开 */
+    width: auto; /* 宽度自适应内容 */
+    padding: 6px 10px; /* 增加内边距（原4px 6px），避免文字贴边被截断 */
+    white-space: normal; /* 强制允许自动换行 */
+ }
+
+/* Logo标签（适配1313×363图片，无字体，仅调整尺寸） */
+QLabel#lblLogo {
+    min-width: 180px; /* 按图片比例设置，避免拉伸 */
+    min-height: 49px; /* 160÷3.617≈44（图片宽高比3.617:1） */
+    max-width: 180px;
+    max-height: 49px;
+    background-color: #000000;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+/* ================================= 分组框样式（彻底修复标题遮挡） ================================= */
+QGroupBox {
+    border: 1px solid #333333;
+    border-radius: 6px;
+    margin-top: 15px;
+    padding: 10px;
+    color: #e67e22;
+    font-weight: 600;
+    background-color: #000000;
+}
+
+/* 各功能分组框差异化适配 */
+QGroupBox#groupBox {
+    background-color: #0a0a0a;
+    border-color: #444444;
+    margin-top: 10px;
+}
+
+QGroupBox#grpBatteryStatus,
+QGroupBox#grpSensorStatus,
+QGroupBox#grpAuvStatus,
+QGroupBox#grpMotionControl,
+QGroupBox#grpComponentSwitch,
+QGroupBox#logGroupBox {
+    background-color: #0a0a0a;
+    margin-top: 18px;
+}
+
+QGroupBox#grpNavigationCtrl {
+    background-color: #0a0a0a;
+    border-color: #555555;
+    margin-top: 18px;
+    padding-top: 15px;
+}
+
+QGroupBox#grp3dModel {
+    background-color: #000000;
+    border-color: #444444;
+    min-height: 750px;
+    padding-top: 0 !important; /* 关键修改：取消顶部内边距 */
+    padding: 0 10px !important; /* 左右内边距按需保留，上下设为0 */
+}
+
+/* 分组框内部元素间距优化（避免与标题重叠） */
+QGroupBox QLabel:first-child {
+    margin-top: 10px;
+}
+
+QGroupBox QGridLayout {
+    margin-top: 10px;
+    vertical-spacing: 10px;
+    horizontal-spacing: 10px;
+}
+
+/* ================================= 按钮样式（核心操作区优化） ================================= */
+QPushButton {
+    color: #a9b7c6;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #222222, stop:1 #111111);
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 3px 12px;
+    min-height: 28px; /* 同步缩小按钮高度，适配10pt字体 */
+    max-height: 28px;
+    min-width: 90px; /* 缩小按钮宽度，避免占用过多空间 */
+    font-size: 8.5pt;
+}
+
+QPushButton:hover {
+    border-color: #e67e22;
+    color: #ffffff;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #2a2a2a, stop:1 #1a1a1a);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    color: #000000;
+    border-color: #ff9933;
+}
+
+QPushButton:disabled {
+    background: #1a1a1a;
+    color: #666666;
+    border-color: #333333;
+}
+
+/* 分类按钮差异化（功能色与AMOLED风格融合） */
+QPushButton#btnRemoteMode,
+QPushButton#btnWaypointMode,
+QPushButton#btnSingleTarget {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #1a2a3a, stop:1 #0a1a2a);
+    border-color: #556677;
+}
+
+QPushButton#btnRemoteMode:checked,
+QPushButton#btnWaypointMode:checked,
+QPushButton#btnSingleTarget:checked {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    color: #000000;
+    border-color: #ff9933;
+}
+
+QPushButton#btnStartSail,
+QPushButton#btnStartAscent,
+QPushButton#btnStartDescent {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #1a2a1a, stop:1 #0a1a0a);
+    border-color: #446644;
+}
+
+QPushButton#btnStop,
+QPushButton#btnEmergencyStop,
+QPushButton#btnShutdown {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #3a1a1a, stop:1 #2a0a0a);
+    border-color: #664444;
+}
+
+QPushButton#btnSetAltitude,
+QPushButton#btnSetDepth,
+QPushButton#btnSetSpeed,
+QPushButton#btnSetHeading,
+QPushButton#btnSetPosition {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #1a2a1a, stop:1 #0a1a0a);
+    border-color: #446644;
+}
+
+QPushButton#btnCancelAltitude,
+QPushButton#btnCancelDepth,
+QPushButton#btnCancelSpeed,
+QPushButton#btnCancelHeading,
+QPushButton#btnCancelPosition {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #2a2a1a, stop:1 #1a1a0a);
+    border-color: #666644;
+}
+/* ================================= QComboBox 基础样式 ================================= */
+QComboBox {
+    /* 背景与输入框保持一致（深黑#121212，区别于纯黑窗口背景） */
+    background-color: #121212;
+    /* 边框与按钮、输入框统一（深灰#444444，焦点时变橙色） */
+    border: 1px solid #444444;
+    border-radius: 4px; /* 圆角与其他控件协调 */
+    /* 内边距：文字与边框保持距离，避免贴边 */
+    padding: 6px 8px;
+    /* 字体：与全局统一（8.5pt，思源黑体） */
+    font-family: "Source Han Sans CN", "黑体", sans-serif;
+    font-size: 8.5pt;
+    color: #a9b7c6; /* 文字颜色：浅灰，适配深色背景 */
+    min-height: 28px; /* 高度与按钮、输入框一致，保证布局对齐 */
+}
+
+/* ================================= 交互状态样式 ================================= */
+/* 鼠标悬浮时 */
+QComboBox:hover {
+    border-color: #e67e22; /* 边框变橙色，提示可交互 */
+    color: #ffffff; /* 文字变白，增强对比度 */
+    background-color: #1a1a1a; /* 背景稍亮，反馈悬浮状态 */
+}
+
+/* 获得焦点时（当前操作控件） */
+QComboBox:focus {
+    border-color: #e67e22; /* 焦点边框明确为橙色 */
+    background-color: #1a1a1a; /* 背景亮于正常状态，突出焦点 */
+    outline: none; /* 去除默认焦点虚线（可选） */
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #1a1a1a; /* 背景比正常状态更深 */
+    color: #666666; /* 文字变灰，提示不可交互 */
+    border-color: #333333; /* 边框颜色变深，与禁用状态匹配 */
+}
+
+
+/* ================================= 下拉按钮与箭头样式 ================================= */
+/* 下拉按钮区域（右侧箭头所在的小方块） */
+QComboBox::drop-down {
+    border-left: 1px solid #444444; /* 左侧分隔线，与边框颜色一致 */
+    width: 24px; /* 按钮宽度，适配箭头大小 */
+}
+
+/* 下拉箭头图标 */
+QComboBox::down-arrow {
+    image: url(./icon/communication/arrow_down.png); /* 复用现有箭头图标 */
+    width: 14px; /* 箭头宽度，与按钮区域协调 */
+    height: 14px;
+    margin: 0 4px; /* 箭头与按钮边缘留空隙，避免贴边 */
+}
+
+/* 下拉按钮悬浮时（箭头区域） */
+QComboBox::drop-down:hover {
+    background-color: #222222; /* 按钮区域背景稍亮，反馈交互 */
+}
+
+/* 下拉按钮按下时 */
+QComboBox::drop-down:pressed {
+    background-color: #e67e22; /* 与按钮按下状态一致，用橙色 */
+}
+
+/* 下拉按钮按下时的箭头（反色，增强对比） */
+QComboBox::down-arrow:pressed {
+    image: url(./icon/communication/arrow_down_pressed.png); /* 可选：箭头变黑色 */
+}
+
+
+/* ================================= 下拉列表样式（QAbstractItemView） ================================= */
+/* 下拉列表容器 */
+QComboBox QAbstractItemView {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: #a9b7c6;
+    font-size: 8.5pt;
+    padding: 4px 0;
+    outline: none;
+}
+
+/* 下拉列表项（正常状态） */
+QComboBox QAbstractItemView::item {
+    height: 28px;
+    padding: 0 12px;
+    background-color: transparent;
+}
+
+/* 列表项悬浮时（非选中项） */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* 列表项选中时（基础状态） */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #e67e22; /* 橙色 */
+    color: #000000; /* 黑色文字 */
+}
+
+QComboBox QAbstractItemView::item:selected:hover {
+    background-color: #e67e22 !important; /* 用 !important 强制覆盖 */
+    color: #000000 !important;
+}
+
+QComboBox QAbstractItemView::item:hover:selected {
+    background-color: #e67e22 !important;
+    color: #000000 !important;
+}
+
+/* 下拉列表滚动条（复用全局滚动条样式，保持一致） */
+QComboBox QAbstractItemView QScrollBar:vertical {
+    width: 10px;
+    background: #121212;
+    border: 1px solid #333333;
+    border-radius: 4px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:vertical {
+    background: #444444;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:vertical:hover {
+    background: #e67e22; /* 滚动条 hover 时变橙色，与整体强调色呼应 */
+}
+
+/* ================================= 输入框与文本编辑框（数据录入区） ================================= */
+QLineEdit, QTextEdit {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 3 8px;
+    min-height: 28px; /* 缩小高度，适配10pt字体 */
+    max-height: none;
+    color: #a9b7c6;
+    selection-background-color: #e67e22;
+    selection-color: #000000;
+    font-size: 8.5pt;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #e67e22;
+    background-color: #1a1a1a;
+}
+
+/* ================================= grpMotionControl 专属优化（核心生效） ================================= */
+/* 网格布局垂直间距（缝隙） */
+
+/* 1. 网格布局垂直间距（核心：两行之间的缝隙） */
+QGroupBox#grpMotionControl > QGridLayout#gridLayout_4 {
+    vertical-spacing: 20px !important; /* 增大至20px，确保缝隙明显，优先级最高 */
+    margin: 10px 0 15px 0 !important; /* 上下留空，避免贴边 */
+}
+
+/* 2. 最后一行布局顶部外边距（双重保障：避免与上一行紧挨着） */
+QGroupBox#grpMotionControl QHBoxLayout#horizontalLayout_32 {
+    margin-top: 10px !important; /* 额外增加10px顶部边距，缝隙更稳定 */
+    spacing: 8px !important; /* 与上一行布局间距完全一致 */
+}
+
+/* 3. 上一行布局间距统一（确保对齐基础） */
+QGroupBox#grpMotionControl QHBoxLayout#horizontalLayout_31 {
+    spacing: 8px !important; /* 与最后一行保持一致，控件排列节奏相同 */
+}
+
+/* 4. 按钮尺寸统一（确保弹簧基础宽度准确） */
+QGroupBox#grpMotionControl QPushButton {
+    min-width: 90px !important;
+    max-width: 110px !important;
+    min-height: 28px !important;
+    max-height: 28px !important;
+}
+
+/* 5. 输入框尺寸完全统一（缩放时不变形，对齐核心） */
+QGroupBox#grpMotionControl QLineEdit {
+    min-width: 120px !important;
+    max-width: none;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    text-align: right !important;
+    padding-right: 10px !important;
+}
+/* 1. 最后一行的两个按钮：视觉隐藏（透明），但保留尺寸和布局占位 */
+QGroupBox#grpMotionControl QPushButton#btnSetPosition_2,
+QGroupBox#grpMotionControl QPushButton#btnCancelPosition_2 {
+    opacity: 0 !important; /* 核心：完全透明，视觉隐藏 */
+    border: none !important; /* 去掉边框，避免透明后仍有边框痕迹 */
+    background-color: transparent !important; /* 背景透明 */
+    }
+
+/* 2. 禁用按钮交互反馈（避免鼠标悬停/点击时有视觉变化） */
+QGroupBox#grpMotionControl QPushButton#btnSetPosition_2:hover,
+QGroupBox#grpMotionControl QPushButton#btnCancelPosition_2:hover,
+QGroupBox#grpMotionControl QPushButton#btnSetPosition_2:pressed,
+QGroupBox#grpMotionControl QPushButton#btnCancelPosition_2:pressed {
+    opacity: 0 !important; /* 保持透明，无交互反馈 */
+    border: none !important;
+    background-color: transparent !important;
+}
+/* ================================= 通信日志优化 ================================= */
+/* 通信日志分组框 */
+QGroupBox#logGroupBox {
+    min-height: 250px;
+    padding: 12px;
+}
+
+/* 日志文本框（字体缩小为9pt，等宽字体更紧凑） */
+QTextEdit#logTextEdit {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 7pt; /* 从11pt降至9pt，多显示日志内容 */
+    line-height: 1.5;
+    min-height: 220px;
+    max-height: 220px;
+    min-width: 380px;
+    background-color: #0a0a0a;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 10px;
+    color: #a9b7c6;
+}
+
+/* 日志文本框滚动区域 */
+QScrollArea#logScrollArea {
+    border: none;
+    background-color: transparent;
+}
+
+/* 日志容器布局 */
+QVBoxLayout#logLayout {
+    margin: 0;
+    spacing: 0;
+}
+
+/* ================================= 进度条样式（电池状态专属） ================================= */
+QProgressBar {
+    border: 1px solid #444444;
+    border-radius: 4px;
+    text-align: center;
+    height: 20px;
+    background-color: #121212;
+    color: #a9b7c6;
+    font-size: 7.6pt; /* 缩小进度条文本字体，避免溢出 */
+   line-height: 20px; /* 垂直居中 */
+}
+
+QProgressBar::chunk {
+    border-radius: 3px;
+}
+
+/* 动力电进度条（AMOLED橙色主调） */
+QProgressBar#progressBarPower {
+    border-color: #555555;
+}
+
+QProgressBar#progressBarPower::chunk {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+                                stop:0 #e67e22, stop:1 #c06618);
+}
+
+/* 动力电低电量预警（红色渐变） */
+QProgressBar#progressBarPower[value="0"]::chunk,
+QProgressBar#progressBarPower[value="1"]::chunk,
+QProgressBar#progressBarPower[value="2"]::chunk,
+QProgressBar#progressBarPower[value="3"]::chunk,
+QProgressBar#progressBarPower[value="4"]::chunk {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+                                stop:0 #ff4444, stop:1 #cc3333);
+}
+
+QProgressBar#progressBarPower[value="5"]::chunk,
+QProgressBar#progressBarPower[value="6"]::chunk,
+QProgressBar#progressBarPower[value="7"]::chunk,
+QProgressBar#progressBarPower[value="8"]::chunk,
+QProgressBar#progressBarPower[value="9"]::chunk,
+QProgressBar#progressBarPower[value="10"]::chunk {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+                                stop:0 #ffaa00, stop:1 #cc8800);
+}
+
+/* 仪表电进度条（绿色系区分） */
+QProgressBar#progressBarInstrument {
+    border-color: #555555;
+    background-color: #121212;
+}
+
+QProgressBar#progressBarInstrument::chunk {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+                                stop:0 #4CAF50, stop:1 #388E3C);
+}
+
+/* ================================= 部件开关样式（圆形指示灯修复） ================================= */
+/* 部件开关分组框（增大内部水平间距） */
+QGroupBox#grpComponentSwitch {
+    min-width: 650px;
+    padding: 12px 20px; /* 增加左右内边距，给标签更多空间 */
+}
+
+/* 部件区域网格布局（增大列间距） */
+QGroupBox#grpComponentSwitch QGridLayout {
+   /* 第一列（标签+指示灯+复选框）最小宽度 */
+    column-min-width: 0 320px; /* 第一列最小280px（标签85px+指示灯16px+复选框20px+间距） */
+    column-min-width: 1 260px; /* 第二列最小240px */
+    horizontal-spacing: 20px; /* 列间基础间距 */
+}
+
+/* ================================= 水平弹簧（horizontalSpacer_2）属性调整 ================================= */
+/* 强制弹簧保持最小宽度，避免被第一列挤压 */
+QSpacerItem#horizontalSpacer_2 {
+    min-width: 50px !important; /* 弹簧最小宽度40px，确保两列分离 */
+    maximum-width: 100px !important; /* 最大宽度限制，避免过宽浪费空间 */
+}
+
+QCheckBox {
+    min-width: 22px;
+    max-width: 22px;
+    min-height: 22px;
+    max-height: 22px;
+    color: #a9b7c6;
+    background-color: #000000;
+    font-size: 8.5pt;
+    margin-right: 10px; /* 从8px增至10px，与标签拉开间距 */
+}
+
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    background-color: #121212;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #e67e22;
+    image: url(:/icon/monitor/icon/monitor/check_white.png);
+}
+
+QCheckBox::indicator:hover {
+    border-color: #e67e22;
+}
+
+/* 部件圆形指示灯（确保不拉伸变形） */
+QLabel#lblBeidouIcon,
+QLabel#lblInsIcon,
+QLabel#lblUsblIcon,
+QLabel#lblSideScanSonarIcon,
+QLabel#lblDepthSensorIcon,
+QLabel#lblDvlIcon,
+QLabel#lblAltimeterIcon,
+QLabel#lblMultibeamEchoSounderIcon,
+QLabel#lblForwardLookingSonarIcon,
+QLabel#lblCtdIcon,
+QLabel#lblMagnetometerIcon,
+QLabel#lblCameraIcon,
+QLabel#lblLightSourceIcon,
+QLabel#lblThruster1Icon,
+QLabel#lblThruster2Icon,
+QLabel#lblThruster3Icon,
+QLabel#lblThruster4Icon,
+QLabel#lblRudder1Icon,
+QLabel#lblRudder2Icon,
+QLabel#lblRudder3Icon,
+QLabel#lblRudder4Icon,
+QLabel#lblPayloadReleaseIcon {
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    border-radius: 10px;
+    border: 1px solid #444444;
+    background-color: #333333;
+    margin-right: 10px; /* 复选框与标签之间增加间距 */
+    vertical-align: middle; /* 新增：强制垂直居中对齐 */
+}
+
+/* 指示灯点亮状态（橙色圆形） */
+QCheckBox#chkBeidou:checked ~ QLabel#lblBeidouIcon,
+QCheckBox#chkIns:checked ~ QLabel#lblInsIcon,
+QCheckBox#chkUsbl:checked ~ QLabel#lblUsblIcon,
+QCheckBox#chkSideScanSonar:checked ~ QLabel#lblSideScanSonarIcon,
+QCheckBox#chkDepthSensor:checked ~ QLabel#lblDepthSensorIcon,
+QCheckBox#chkDvl:checked ~ QLabel#lblDvlIcon,
+QCheckBox#chkAltimeter:checked ~ QLabel#lblAltimeterIcon,
+QCheckBox#chkMultibeamEchoSounder:checked ~ QLabel#lblMultibeamEchoSounderIcon,
+QCheckBox#chkForwardLookingSonar:checked ~ QLabel#lblForwardLookingSonarIcon,
+QCheckBox#chkCtd:checked ~ QLabel#lblCtdIcon,
+QCheckBox#chkMagnetometer:checked ~ QLabel#lblMagnetometerIcon,
+QCheckBox#chkCamera:checked ~ QLabel#lblCameraIcon,
+QCheckBox#chkLightSource:checked ~ QLabel#lblLightSourceIcon,
+QCheckBox#chkThruster1:checked ~ QLabel#lblThruster1Icon,
+QCheckBox#chkThruster2:checked ~ QLabel#lblThruster2Icon,
+QCheckBox#chkThruster3:checked ~ QLabel#lblThruster3Icon,
+QCheckBox#chkThruster4:checked ~ QLabel#lblThruster4Icon,
+QCheckBox#chkRudder1:checked ~ QLabel#lblRudder1Icon,
+QCheckBox#chkRudder2:checked ~ QLabel#lblRudder2Icon,
+QCheckBox#chkRudder3:checked ~ QLabel#lblRudder3Icon,
+QCheckBox#chkRudder4:checked ~ QLabel#lblRudder4Icon,
+QCheckBox#chkPayloadRelease:checked ~ QLabel#lblPayloadReleaseIcon {
+    background-color: #e67e22;
+    border-color: #ff9933;
+    margin-right: 10px; /* 指示灯与标签之间增加间距 */
+}
+
+/* 部件标签与指示灯间距优化 */
+QLabel#lblBeidou,
+QLabel#lblIns,
+QLabel#lblUsbl,
+QLabel#lblSideScanSonar,
+QLabel#lblDepthSensor,
+QLabel#lblDvl,
+QLabel#lblAltimeter_2,
+QLabel#lblMultibeamEchoSounder,
+QLabel#lblForwardLookingSonar,
+QLabel#lblCtd_2,
+QLabel#lblMagnetometer,
+QLabel#lblCamera,
+QLabel#lblLightSource,
+QLabel#lblThruster1,
+QLabel#lblThruster2,
+QLabel#lblThruster3,
+QLabel#lblThruster4,
+QLabel#lblRudder1,
+QLabel#lblRudder2,
+QLabel#lblRudder3,
+QLabel#lblRudder4,
+QLabel#lblPayloadRelease {
+    color: #a9b7c6;
+    min-width: 95px;
+    max-width: none;
+   width: auto; /* 宽度自适应内容 */
+    text-align: left;
+    padding: 4px 8px; /* 增加内边距，避免文字贴边 */
+    font-size: 8.5pt;
+    min-height: 20px; /* 增大最小高度，容纳两行文字（长名称换行后不挤压） */
+    vertical-align: middle; /* 新增：强制垂直居中对齐 */
+    white-space: normal; /* 启用自动换行（Qt默认可能为nowrap） */
+    line-height: 20px; /* 新增：行高与高度一致，确保单行文本垂直居中 */
+}
+QLabel#lblMultibeamEchoSounder,
+QLabel#lblSideScanSonar,
+QLabel#lblMagnetometer,
+QLabel#lblForwardLookingSonar {
+    min-height: 60px;       /* 为超长名称预留高度 */
+}
+
+/* ================================= 滚动条样式（AMOLED风格统一） ================================= */
+QScrollBar:horizontal {
+    max-height: 12px;
+    background-color: #000000;
+    border: 1px solid #333333;
+    margin: 0px 18px 0 18px;
+}
+
+QScrollBar::handle:horizontal {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    border-radius: 6px;
+    min-width: 30px;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    border: 1px solid #333333;
+    background-color: #111111;
+    width: 16px;
+}
+
+QScrollBar::add-line:horizontal:hover,
+QScrollBar::sub-line:horizontal:hover {
+    background-color: #222222;
+    border-color: #e67e22;
+}
+
+QScrollBar::add-page:horizontal, 
+QScrollBar::sub-page:horizontal {
+    background-color: transparent;
+}
+
+QScrollBar:vertical {
+    max-width: 12px;
+    background-color: #000000;
+    border: 1px solid #333333;
+    margin: 18px 0 18px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    border-radius: 6px;
+    min-height: 30px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    border: 1px solid #333333;
+    background-color: #111111;
+    height: 16px;
+}
+
+QScrollBar::add-line:vertical:hover,
+QScrollBar::sub-line:vertical:hover {
+    background-color: #222222;
+    border-color: #e67e22;
+}
+
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical {
+    background-color: transparent;
+}
+
+/* ================================= 布局与动画（适配工业监控体验） ================================= */
+/* 统一布局间距（避免拥挤） */
+QHBoxLayout {
+    spacing: 10px;
+}
+
+QVBoxLayout, QGridLayout {
+    spacing: 8px;
+}
+
+/* 数据更新动画（subtle提示，不破坏AMOLED简洁） */
+@keyframes dataFlash {
+    0% { background-color: #1a1a1a; border-color: #555555; }
+    50% { background-color: #2a2a2a; border-color: #e67e22; }
+    100% { background-color: #1a1a1a; border-color: #555555; }
+}
+
+QLabel#lblPowerVoltageVal:updated,
+QLabel#lblDepthDisplay:updated {
+    animation: dataFlash 0.5s ease;
+}
+
+/* ================================= 左上角公司信息区域优化（解决Logo与时间重叠） ================================= */
+
+/* 当前时间标签（适配缩小字体，避免遮挡） */
+QLabel#lblCurrentTime {
+    font-family: "Source Han Sans CN", "Consolas", monospace;
+    font-size: 8.5pt; /* 从11pt降至10pt */
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    min-height: 40px; /* 同步缩小高度 */
+    max-height: none;    
+    min-width: 180px;
+    padding: 5px 10px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* 通信方式标签（适配缩小字体） */
+QGroupBox#gb_currentCommunicationWay {
+    background-color: #0a0a0a;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 5px; /* 增加内边距 */
+}
+
+QLabel#lbl_currrentCommunicationWay {
+    font-size: 8.5pt;
+    color: #e67e22;
+    background-color: #121212;
+    border-radius: 3px;
+    padding: 3px 12px;
+    min-height: 30px; /* 增加最小高度 */
+}
+/* ========== QMessageBox样式 ========== */
+QMessageBox {
+    background-color: #121212;
+    color: #a9b7c6;
+    border: 1px solid #444444;
+    border-radius: 8px;
+}
+
+/* 消息框标题文本 */
+QMessageBox QLabel#qt_msgbox_label {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 9pt;
+    padding-bottom: 8px;
+}
+
+/* 消息框内容文本 */
+QMessageBox QLabel {
+    color: #a9b7c6;
+    font-size: 8.5pt;
+    padding: 4px 8px;
+}
+
+/* 消息框按钮 */
+QMessageBox QPushButton {
+    background-color: #2a2a2a;
+    color: #a9b7c6;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 6px 16px;
+    min-width: 80px;
+    min-height: 30px;
+    font-size: 8.5pt;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #e67e22;
+    color: #000000;
+    border-color: #e67e22;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #d35400;
+    border-color: #d35400;
+}
+
+/* 消息框按钮布局 */
+QMessageBox QDialogButtonBox {
+    padding: 10px;
+    spacing: 8px;
+}
+
+/* 消息框图标区域 */
+QMessageBox QWidget#qt_msgbox_icon_label {
+    padding: 10px;
+}
+/* 3D模型标签专属样式：顶部对齐+填充+无额外内边距 */
+QLabel#lbl3dModel {
+    min-height: 720px; /* 取消全局的min-height限制 */
+    max-height: none !important;
+    padding: 0 !important; /* 取消内边距，避免顶部留白 */
+    margin: 0 !important; /* 取消外边距 */
+    background-color: #000000;
+    /* 强制图片拉伸填充（如果需要保持比例，可删除此句，保留scaledContents: true） */
+    /* 若要保持比例且顶部对齐，保留scaledContents: true即可 */
+}

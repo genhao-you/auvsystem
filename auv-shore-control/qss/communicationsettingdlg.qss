@@ -1,0 +1,358 @@
+/* ================================= 通信设置对话框整体放大样式 ================================= */
+QDialog#CommunicationsSettingDialogClass {
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    min-width: 1500px !important; 
+    min-height: 1000px !important; 
+}
+
+/* 全局字体统一（放大至9pt，更清晰） */
+QDialog#CommunicationsSettingDialogClass QLabel,
+QDialog#CommunicationsSettingDialogClass QPushButton,
+QDialog#CommunicationsSettingDialogClass QComboBox,
+QDialog#CommunicationsSettingDialogClass QLineEdit,
+QDialog#CommunicationsSettingDialogClass QGroupBox {
+    font-family: "Source Han Sans CN", "黑体", sans-serif;
+    font-size: 9pt !important;
+    line-height: 1.6;
+    color: #a9b7c6;
+}
+
+/* ================================= 主分组框放大（核心空间扩展） ================================= */
+QGroupBox#grp_CommunicationSetting {
+    background-color: #0a0a0a;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    padding: 25px 20px !important; /* 原15px，放大内边距 */
+    margin: 15px !important;
+    min-width: 720px !important; /* 原644px，同步放大 */
+    min-height: 550px !important; /* 原498px，同步放大 */
+}
+
+QGroupBox#grp_CommunicationSetting::title {
+    background-color: #000000;
+    padding: 6px 14px !important;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    font-size: 10pt !important;
+    color: #e67e22;
+    font-weight: 600;
+    top: -10px;
+    left: 20px;
+    z-index: 1;
+}
+
+/* ================================= 子分组框放大（避免内部拥挤） ================================= */
+QDialog#CommunicationsSettingDialogClass QGroupBox:not(#grp_CommunicationSetting) {
+    background-color: #121212;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 18px 15px !important; /* 原12px，放大内边距 */
+    min-width: 210px !important; /* 原196px，放大 */
+    min-height: 250px !important; /* 原227px，放大 */
+    margin: 8px !important; /* 子分组框之间增加间距 */
+}
+
+QDialog#CommunicationsSettingDialogClass QGroupBox:not(#grp_CommunicationSetting)::title {
+    background-color: #121212;
+    padding: 5px 12px !important;
+    border: none;
+    font-size: 10pt !important;
+    color: #e67e22;
+    font-weight: 500;
+    top: -8px;
+    left: 15px;
+}
+
+/* ================================= 标签样式（放大+防遮挡） ================================= */
+/* 普通文本标签（放大最小高度） */
+QDialog#CommunicationsSettingDialogClass QLabel {
+    background-color: transparent;
+    min-height: 28px !important; /* 原24px，放大 */
+    padding: 4px 6px !important;
+}
+
+/* 连接状态图标标签（放大尺寸+避免遮挡） */
+QLabel#lbl_01_WiredNetStatusIcon,
+QLabel#lbl_02_WirelessNetStatusIcon,
+QLabel#lbl_03_RadioStatusIcon,
+QLabel#lbl_04_BDSatStatusIcon,
+QLabel#lbl_05_YXSatStatusIcon {
+    min-width: 70px !important; 
+    min-height: 40px !important;
+    max-width: 70px !important;
+    max-height: 40px !important;
+    border-radius: 4px !important;
+    border: 1px solid #444444;
+    background-color: #333333;
+    margin: 0 8px !important; /* 增加左右间距，避免被其他控件遮挡 */
+}
+
+/* 文本标签（固定宽度，避免挤压图标） */
+QLabel#lbl_01_WiredNetStatusText,
+QLabel#lbl_02_WirelessNetStatusText,
+QLabel#lbl_03_RadioStatusText,
+QLabel#lbl_04_BDSatStatusText,
+QLabel#lbl_05_YXSatStatusText {
+    min-width: 70px !important; /* 固定宽度，不挤压后续图标 */
+    max-width: 70px !important;
+    text-align: right !important;
+}
+
+/* ================================= 输入框样式（放大尺寸） ================================= */
+QDialog#CommunicationsSettingDialogClass QLineEdit {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 4px 10px !important; /* 原3px 8px，放大内边距 */
+    min-height: 30px !important; /* 原26px，放大 */
+    min-width: 120px !important; /* 原100px，放大 */
+    selection-background-color: #e67e22;
+    selection-color: #000000;
+}
+
+QDialog#CommunicationsSettingDialogClass QLineEdit:focus {
+    border-color: #e67e22;
+    background-color: #1a1a1a;
+}
+
+/* ================================= 下拉框样式 ================================= */
+QDialog#CommunicationsSettingDialogClass QComboBox {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 4px 10px !important;
+    min-height: 30px !important;
+    min-width: 120px !important;
+    color: #a9b7c6;
+}
+
+QDialog#CommunicationsSettingDialogClass QComboBox:hover {
+    border-color: #e67e22;
+}
+
+QDialog#CommunicationsSettingDialogClass QComboBox:focus {
+    border-color: #e67e22;
+    background-color: #1a1a1a;
+}
+
+QDialog#CommunicationsSettingDialogClass QComboBox::drop-down {
+    border-left: 1px solid #444444;
+    width: 24px;
+}
+
+QDialog#CommunicationsSettingDialogClass QComboBox::down-arrow {
+    image: url(:/icon/communication/icon/communication/arrow_down.png);
+    width: 14px;
+    height: 14px;
+}
+
+/* ================================= 按钮样式（放大尺寸） ================================= */
+QDialog#CommunicationsSettingDialogClass QPushButton {
+    color: #a9b7c6;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #222222, stop:1 #111111);
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 4px 15px !important; /* 原3px 12px，放大内边距 */
+    min-height: 30px !important; /* 原26px，放大 */
+    min-width: 80px !important; /* 原70px，放大 */
+    margin: 0 4px !important;
+}
+
+QDialog#CommunicationsSettingDialogClass QPushButton:hover {
+    border-color: #e67e22;
+    color: #ffffff;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #2a2a2a, stop:1 #1a1a1a);
+}
+
+QDialog#CommunicationsSettingDialogClass QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #e67e22, stop:1 #c06618);
+    color: #000000;
+    border-color: #ff9933;
+}
+
+/* ================================= 布局间距放大（核心解决拥挤） ================================= */
+QDialog#CommunicationsSettingDialogClass QGridLayout,
+QDialog#CommunicationsSettingDialogClass QHBoxLayout,
+QDialog#CommunicationsSettingDialogClass QVBoxLayout {
+    spacing: 12px !important; /* 原8px，大幅增加间距 */
+    margin: 6px !important;
+}
+
+/* 子分组框内部布局间距（进一步宽松） */
+QGroupBox#grp_01_WiredNet QGridLayout,
+QGroupBox#grp_02_WirelessNet QGridLayout,
+QGroupBox#grp_03_Radio QVBoxLayout,
+QGroupBox#grp_04_BDSat QGridLayout,
+QGroupBox#grp_05_YXSat QGridLayout {
+    vertical-spacing: 15px !important; /* 原10px，放大 */
+    horizontal-spacing: 15px !important; /* 原10px，放大 */
+    margin-top: 12px !important;
+}
+
+/* 状态图标所在布局（单独增加间距，避免遮挡） */
+QHBoxLayout#horizontalLayout,
+QHBoxLayout#horizontalLayout_6,
+QHBoxLayout#horizontalLayout_11,
+QHBoxLayout#horizontalLayout_34,
+QHBoxLayout#horizontalLayout_38 {
+    spacing: 10px !important;
+    align-items: center !important; /* 垂直居中，避免图标与文字错位 */
+}
+
+/* ================================= 连接状态图标激活样式 ================================= */
+QLabel#lbl_01_WiredNetStatusIcon[connected="true"],
+QLabel#lbl_02_WirelessNetStatusIcon[connected="true"],
+QLabel#lbl_03_RadioStatusIcon[connected="true"],
+QLabel#lbl_04_BDSatStatusIcon[connected="true"],
+QLabel#lbl_05_YXSatStatusIcon[connected="true"] {
+    background-color: #4CAF50;
+    border-color: #66cc66;
+}
+
+QLabel#lbl_01_WiredNetStatusIcon[connected="false"],
+QLabel#lbl_02_WirelessNetStatusIcon[connected="false"],
+QLabel#lbl_03_RadioStatusIcon[connected="false"],
+QLabel#lbl_04_BDSatStatusIcon[connected="false"],
+QLabel#lbl_05_YXSatStatusIcon[connected="false"] {
+    background-color: #ff4444;
+    border-color: #cc3333;
+}
+
+/* -------------------------- 
+   以 cb_ 开头的 QComboBox 下拉列表容器 
+-------------------------- */
+QComboBox[class^="cb_"],
+QComboBox#cb_03_RadioPort,
+QComboBox#cb_03_RadioBaudRate,
+QComboBox#cb_04_BDSatPort,
+QComboBox#cb_04_BDSatBaudRate,
+QComboBox#cb_05_YXSatPort,
+QComboBox#cb_05_YXSatBaudRate {
+    background-color: #121212;       /* 与输入框背景一致 */
+    border: 1px solid #444444;       /* 统一边框 */
+    border-radius: 4px;              /* 圆角协调 */
+    color: #a9b7c6;                  /* 文字颜色统一 */
+    font-size: 8.5pt;                /* 字体大小统一 */
+    padding: 4px 10px;               /* 上下留空隙 */
+    min-height: 30px;
+    min-width: 120px;
+}
+
+QComboBox[class^="cb_"] QAbstractItemView,
+QComboBox#cb_03_RadioPort QAbstractItemView,
+QComboBox#cb_03_RadioBaudRate QAbstractItemView,
+QComboBox#cb_04_BDSatPort QAbstractItemView,
+QComboBox#cb_04_BDSatBaudRate QAbstractItemView,
+QComboBox#cb_05_YXSatPort QAbstractItemView,
+QComboBox#cb_05_YXSatBaudRate QAbstractItemView {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: #a9b7c6;
+    font-size: 8.5pt;
+    padding: 4px 0;
+    outline: none;
+}
+
+/* -------------------------- 
+   下拉列表项（正常状态） 
+-------------------------- */
+QComboBox[class^="cb_"] QAbstractItemView::item,
+QComboBox#cb_03_RadioPort QAbstractItemView::item,
+QComboBox#cb_03_RadioBaudRate QAbstractItemView::item,
+QComboBox#cb_04_BDSatPort QAbstractItemView::item,
+QComboBox#cb_04_BDSatBaudRate QAbstractItemView::item,
+QComboBox#cb_05_YXSatPort QAbstractItemView::item,
+QComboBox#cb_05_YXSatBaudRate QAbstractItemView::item {
+    height: 28px;                    /* 选项高度与输入框对齐 */
+    padding: 0 12px;                 /* 左右留空隙 */
+    background-color: transparent;   /* 默认透明 */
+}
+
+/* -------------------------- 
+   列表项悬浮时（非选中项） 
+-------------------------- */
+QComboBox[class^="cb_"] QAbstractItemView::item:hover,
+QComboBox#cb_03_RadioPort QAbstractItemView::item:hover,
+QComboBox#cb_03_RadioBaudRate QAbstractItemView::item:hover,
+QComboBox#cb_04_BDSatPort QAbstractItemView::item:hover,
+QComboBox#cb_04_BDSatBaudRate QAbstractItemView::item:hover,
+QComboBox#cb_05_YXSatPort QAbstractItemView::item:hover,
+QComboBox#cb_05_YXSatBaudRate QAbstractItemView::item:hover {
+    background-color: #2a2a2a;       /* 浅灰背景区分 */
+    color: #ffffff;                  /* 白色文字增强对比 */
+}
+
+/* -------------------------- 
+   列表项选中时（基础状态） 
+-------------------------- */
+QComboBox[class^="cb_"] QAbstractItemView::item:selected,
+QComboBox#cb_03_RadioPort QAbstractItemView::item:selected,
+QComboBox#cb_03_RadioBaudRate QAbstractItemView::item:selected,
+QComboBox#cb_04_BDSatPort QAbstractItemView::item:selected,
+QComboBox#cb_04_BDSatBaudRate QAbstractItemView::item:selected,
+QComboBox#cb_05_YXSatPort QAbstractItemView::item:selected,
+QComboBox#cb_05_YXSatBaudRate QAbstractItemView::item:selected {
+    background-color: #e67e22;       /* 橙色背景突出选中 */
+    color: #000000;                  /* 黑色文字确保可读性 */
+}
+
+/* -------------------------- 
+   关键：已选中项 + 鼠标悬浮（强制保持橙色） 
+-------------------------- */
+QComboBox[class^="cb_"] QAbstractItemView::item:selected:hover,
+QComboBox#cb_03_RadioPort QAbstractItemView::item:selected:hover,
+QComboBox#cb_03_RadioBaudRate QAbstractItemView::item:selected:hover,
+QComboBox#cb_04_BDSatPort QAbstractItemView::item:selected:hover,
+QComboBox#cb_04_BDSatBaudRate QAbstractItemView::item:selected:hover,
+QComboBox#cb_05_YXSatPort QAbstractItemView::item:selected:hover,
+QComboBox#cb_05_YXSatBaudRate QAbstractItemView::item:selected:hover {
+    background-color: #e67e22 !important; /* 强制覆盖默认蓝色 */
+    color: #000000 !important;
+}
+
+/* -------------------------- 
+   下拉列表滚动条（复用全局风格） 
+-------------------------- */
+/* 滚动条容器 */
+QComboBox[class^="cb_"] QAbstractItemView QScrollBar:vertical,
+QComboBox#cb_03_RadioPort QAbstractItemView QScrollBar:vertical,
+QComboBox#cb_03_RadioBaudRate QAbstractItemView QScrollBar:vertical,
+QComboBox#cb_04_BDSatPort QAbstractItemView QScrollBar:vertical,
+QComboBox#cb_04_BDSatBaudRate QAbstractItemView QScrollBar:vertical,
+QComboBox#cb_05_YXSatPort QAbstractItemView QScrollBar:vertical,
+QComboBox#cb_05_YXSatBaudRate QAbstractItemView QScrollBar:vertical {
+    width: 10px;
+    background: #121212;
+    border: 1px solid #333333;
+    border-radius: 4px;
+}
+
+/* 滚动条滑块 */
+QComboBox[class^="cb_"] QAbstractItemView QScrollBar::handle:vertical,
+QComboBox#cb_03_RadioPort QAbstractItemView QScrollBar::handle:vertical,
+QComboBox#cb_03_RadioBaudRate QAbstractItemView QScrollBar::handle:vertical,
+QComboBox#cb_04_BDSatPort QAbstractItemView QScrollBar::handle:vertical,
+QComboBox#cb_04_BDSatBaudRate QAbstractItemView QScrollBar::handle:vertical,
+QComboBox#cb_05_YXSatPort QAbstractItemView QScrollBar::handle:vertical,
+QComboBox#cb_05_YXSatBaudRate QAbstractItemView QScrollBar::handle:vertical {
+    background: #444444;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+/* 滚动条滑块悬浮 */
+QComboBox[class^="cb_"] QAbstractItemView QScrollBar::handle:vertical:hover,
+QComboBox#cb_03_RadioPort QAbstractItemView QScrollBar::handle:vertical:hover,
+QComboBox#cb_03_RadioBaudRate QAbstractItemView QScrollBar::handle:vertical:hover,
+QComboBox#cb_04_BDSatPort QAbstractItemView QScrollBar::handle:vertical:hover,
+QComboBox#cb_04_BDSatBaudRate QAbstractItemView QScrollBar::handle:vertical:hover,
+QComboBox#cb_05_YXSatPort QAbstractItemView QScrollBar::handle:vertical:hover,
+QComboBox#cb_05_YXSatBaudRate QAbstractItemView QScrollBar::handle:vertical:hover {
+    background: #e67e22;             /* 与选中色呼应 */
+}

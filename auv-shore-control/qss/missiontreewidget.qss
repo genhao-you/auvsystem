@@ -1,0 +1,61 @@
+/* 仅保留Qt完全支持的属性，无复杂选择器和高级特性 */
+MissionTreeWidget {
+    background-color: #0a0a0a;
+    color: #e67e22;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 0;
+    font-family: "黑体";
+    font-size: 13px;
+}
+
+/* 树控件视图区域（必加，解决白色背景） */
+MissionTreeWidget QTreeView {
+    background-color: #0a0a0a;
+    color: #e67e22;
+    border: none;
+}
+
+/* 树项基础样式 */
+MissionTreeWidget QTreeView::item {
+    height: 26px;
+    background-color: #0a0a0a;
+    color: #e67e22;
+}
+
+/* 树项选中状态 */
+MissionTreeWidget QTreeView::item:selected {
+    background-color: #e67e22;
+    color: #000000;
+}
+
+/* 表头样式 */
+MissionTreeWidget QHeaderView {
+    background-color: #121212;
+    border-bottom: 1px solid #444444;
+    height: 26px;
+}
+
+MissionTreeWidget QHeaderView::section {
+    background-color: #121212;
+    color: #e67e22;
+    padding-left: 12px;
+    border: none;
+}
+
+/* 滚动条样式（简化版） */
+MissionTreeWidget QScrollBar:vertical {
+    width: 8px;
+    background-color: #0a0a0a;
+    border: 1px solid #444444;
+}
+
+MissionTreeWidget QScrollBar::handle:vertical {
+    background-color: #e67e22;
+    border-radius: 4px;
+}
+
+MissionTreeWidget QScrollBar::add-page:vertical,
+MissionTreeWidget QScrollBar::sub-page:vertical {
+    background-color: #0a0a0a;
+}

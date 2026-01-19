@@ -1,0 +1,332 @@
+/* ================================= 控制参数对话框整体样式（AMOLED核心风格） ================================= */
+QDialog#ControlParamSettingDialogClass {
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    min-width: 740px;
+    min-height: 580px;
+}
+
+/* ================================= 全局字体统一（和主界面保持8.5pt） ================================= */
+QDialog#ControlParamSettingDialogClass QLabel, 
+QDialog#ControlParamSettingDialogClass QPushButton, 
+QDialog#ControlParamSettingDialogClass QDoubleSpinBox,
+QDialog#ControlParamSettingDialogClass QTabWidget {
+    font-family: "Source Han Sans CN", "黑体", "Microsoft YaHei", sans-serif;
+    font-size: 8.5pt;
+    line-height: 1.6;
+}
+
+/* ================================= 标签页容器样式 ================================= */
+QTabWidget#tabWidget {
+    background-color: #000000;
+    border: none;
+    margin: 10px;
+}
+
+/* 标签栏背景 */
+QTabWidget#tabWidget::pane {
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    top: 1px;
+}
+
+/* 标签项基础样式 */
+QTabWidget#tabWidget::tab-bar {
+    alignment: left;
+    margin-left: 10px;
+}
+
+QTabWidget#tabWidget QTabBar::tab {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 6px 20px;
+    margin-right: 3px;
+    color: #a9b7c6;
+    min-width: 100px;
+    min-height: 28px;
+}
+
+/* 标签悬浮状态 */
+QTabWidget#tabWidget QTabBar::tab:hover {
+    background-color: #1a1a1a;
+    border-color: #555555;
+    color: #ffffff;
+}
+
+/* 标签选中状态（橙色强调） */
+QTabWidget#tabWidget QTabBar::tab:selected {
+    background-color: #000000;
+    border-color: #e67e22;
+    color: #e67e22;
+    font-weight: 600;
+}
+
+/* ================================= 滚动区域样式 ================================= */
+QScrollArea {
+    border: none;
+    background-color: transparent;
+}
+
+QScrollArea > QWidget > QWidget {
+    background-color: #000000;
+}
+
+QScrollArea QScrollBar:vertical {
+    max-width: 12px;
+    background-color: #000000;
+    border: 1px solid #333333;
+    margin: 18px 0 18px 0;
+}
+
+QScrollArea QScrollBar::handle:vertical {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    border-radius: 6px;
+    min-height: 30px;
+}
+
+QScrollArea QScrollBar::add-line:vertical,
+QScrollArea QScrollBar::sub-line:vertical {
+    border: 1px solid #333333;
+    background-color: #111111;
+    height: 16px;
+}
+
+QScrollArea QScrollBar::add-page:vertical, 
+QScrollArea QScrollBar::sub-page:vertical {
+    background-color: transparent;
+}
+
+/* ================================= 表单布局样式 ================================= */
+QFormLayout {
+    margin: 10px;
+    spacing: 12px;
+    rowspacing: 12px;
+    columnspacing: 15px;
+}
+
+/* ================================= 标签样式 ================================= */
+QLabel {
+    color: #a9b7c6;
+    background-color: transparent;
+    min-height: 28px;
+    padding: 3px 6px;
+}
+
+/* 参数标签（表单左侧） */
+QLabel[ltext^="深度"],
+QLabel[ltext^="高度"],
+QLabel[ltext^="航向"],
+QLabel[ltext^="最大"],
+QLabel[ltext^="最小"],
+QLabel[ltext^="动态"],
+QLabel[ltext^="小信号"],
+QLabel[ltext^="舵速"],
+QLabel[ltext^="实际"],
+QLabel[ltext^="控制周期"],
+QLabel[ltext^="LOS"],
+QLabel[ltext^="滤波系数"] {
+    min-width: 120px;
+    text-align: right;
+    font-weight: 500;
+}
+
+/* 状态标签（发送状态） */
+QLabel#lbl_DepthStatus,
+QLabel#lbl_HeightStatus,
+QLabel#lbl_HeadingStatus {
+    min-width: 80px;
+    min-height: 28px;
+    padding: 3px 10px;
+    background-color: #121212;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 8.5pt !important;
+    color: #888888 !important;
+}
+
+/* 发送成功状态 */
+QLabel#status_success {
+    color: #4CAF50 !important;
+    border-color: #4CAF50 !important;
+}
+
+/* 发送失败状态 */
+QLabel#status_fail {
+    color: #ff4444 !important;
+    border-color: #ff4444 !important;
+}
+
+/* 图标标签（状态指示灯） */
+QLabel#lbl_DepthIcon,
+QLabel#lbl_HeightIcon,
+QLabel#lbl_HeadingIcon {
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    border-radius: 10px;
+    border: 1px solid #444444;
+    background-color: #333333;
+    margin: 0 5px;
+}
+
+/* 图标点亮状态（成功） */
+QLabel#icon_success {
+    background-color: #4CAF50;
+    border-color: #66bb6a;
+}
+
+/* 图标点亮状态（失败） */
+QLabel#icon_fail {
+    background-color: #ff4444;
+    border-color: #ff6666;
+}
+
+/* 基础样式：箭头按钮默认背景（黑）+ 橙色箭头图标 */
+QDoubleSpinBox::up-button,
+QDoubleSpinBox::down-button {
+    background-color: #222222; /* 按钮默认黑底 */
+    border: none;
+    width: 18px;
+}
+
+/* ================================= QDoubleSpinBox 完整样式（适配黑橙风格） ================================= */
+/* 输入框整体样式 */
+QDoubleSpinBox {
+    color: #a9b7c6; /* 文字颜色：和标签文字一致，替换默认白色 */
+    background-color: #121212; /* 输入框背景：深黑，匹配标签/按钮背景 */
+    border: 1px solid #333333; /* 边框色：和其他组件统一 */
+    border-radius: 4px; /* 圆角：和按钮/标签保持一致 */
+    padding: 3px 6px; /* 内边距：提升文字显示舒适度 */
+    min-height: 28px; /* 高度：和按钮/标签对齐 */
+    min-width: 100px; /* 最小宽度：保证输入区域足够 */
+}
+
+/* 聚焦状态：边框变橙色，增强交互反馈 */
+QDoubleSpinBox:focus {
+    border-color: #e67e22; /* 橙色边框：核心强调色 */
+    outline: none; /* 去除默认聚焦外框 */
+}
+
+/* 选中文字时的样式：保证可读性 */
+QDoubleSpinBox::selected {
+    background-color: #e67e22; /* 选中背景：橙色 */
+    color: #000000; /* 选中文字：黑色，高对比度 */
+}
+
+/* 上下箭头按钮（保留你原有逻辑，仅整合） */
+QDoubleSpinBox::up-button,
+QDoubleSpinBox::down-button {
+    background-color: #222222; /* 按钮默认黑底 */
+    border: none;
+    width: 18px;
+    border-top-right-radius: 4px; /* 上按钮右上圆角 */
+    border-bottom-right-radius: 4px; /* 下按钮右下圆角 */
+}
+
+/* 默认态：橙色箭头图标 */
+QDoubleSpinBox::up-arrow {
+    image: url(./icon/controlparamsetting/arrow_up_orange.png);
+    width: 10px;
+    height: 10px;
+}
+QDoubleSpinBox::down-arrow {
+    image: url(./icon/controlparamsetting/arrow_down_orange.png);
+    width: 10px;
+    height: 10px;
+}
+
+/* 悬浮态：按钮背景变橙色 + 箭头换白色图标 */
+QDoubleSpinBox::up-button:hover,
+QDoubleSpinBox::down-button:hover {
+    background-color: #e67e22;
+}
+
+/* ================================= 按钮样式（复用主界面风格） ================================= */
+QPushButton {
+    color: #a9b7c6;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #222222, stop:1 #111111);
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 3px 12px;
+    min-height: 28px;
+    max-height: 28px;
+    min-width: 100px;
+    font-size: 8.5pt;
+}
+
+QPushButton:hover {
+    border-color: #e67e22;
+    color: #ffffff;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #2a2a2a, stop:1 #1a1a1a);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    color: #000000;
+    border-color: #ff9933;
+}
+
+QPushButton:disabled {
+    background: #1a1a1a;
+    color: #666666;
+    border-color: #333333;
+}
+
+/* 发送按钮专属样式（绿色基调） */
+QPushButton#btn_SendDepthParam,
+QPushButton#btn_SendHeightParam,
+QPushButton#btn_SendHeadingParam {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #1a2a1a, stop:1 #0a1a0a);
+    border-color: #446644;
+}
+
+QPushButton#btn_SendDepthParam:checked,
+QPushButton#btn_SendHeightParam:checked,
+QPushButton#btn_SendHeadingParam:checked {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    color: #000000;
+    border-color: #ff9933;
+}
+/* 输入框样式 */
+QLineEdit {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 6px 8px;
+    color: #a9b7c6;
+    selection-background-color: #e67e22;
+    selection-color: #000000;
+    min-height: 32px;
+    height: 32px;               /* 固定高度，与按钮完全匹配 */
+    font-size: 9pt;             /* 字体大小与按钮一致 */
+}
+
+QLineEdit:focus {
+    border-color: #e67e22;
+    background-color: #1a1a1a;
+}
+
+/* ================================= 布局间距优化 ================================= */
+QVBoxLayout {
+    spacing: 8px;
+    margin: 0;
+}
+
+QHBoxLayout {
+    spacing: 10px;
+    margin: 10px;
+    align-items: center;
+}

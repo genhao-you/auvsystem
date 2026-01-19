@@ -1,0 +1,257 @@
+/* ================================= 航行任务编辑器样式表 ================================= */
+/* 主容器样式 */
+ITaskEditor#SailTaskEditorClass {
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 8px;
+}
+/* ================================= QComboBox 基础样式 ================================= */
+QComboBox {
+    /* 背景与输入框保持一致（深黑#121212，区别于纯黑窗口背景） */
+    background-color: #121212;
+    /* 边框与按钮、输入框统一（深灰#444444，焦点时变橙色） */
+    border: 1px solid #444444;
+    border-radius: 4px; /* 圆角与其他控件协调 */
+    /* 内边距：文字与边框保持距离，避免贴边 */
+    padding: 6px 8px;
+    /* 字体：与全局统一（8.5pt，思源黑体） */
+    font-family: "Source Han Sans CN", "黑体", sans-serif;
+    font-size: 8.5pt;
+    color: #a9b7c6; /* 文字颜色：浅灰，适配深色背景 */
+    min-height: 28px; /* 高度与按钮、输入框一致，保证布局对齐 */
+}
+
+/* ================================= 交互状态样式 ================================= */
+/* 鼠标悬浮时 */
+QComboBox:hover {
+    border-color: #e67e22; /* 边框变橙色，提示可交互 */
+    color: #ffffff; /* 文字变白，增强对比度 */
+    background-color: #1a1a1a; /* 背景稍亮，反馈悬浮状态 */
+}
+
+/* 获得焦点时（当前操作控件） */
+QComboBox:focus {
+    border-color: #e67e22; /* 焦点边框明确为橙色 */
+    background-color: #1a1a1a; /* 背景亮于正常状态，突出焦点 */
+    outline: none; /* 去除默认焦点虚线（可选） */
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #1a1a1a; /* 背景比正常状态更深 */
+    color: #666666; /* 文字变灰，提示不可交互 */
+    border-color: #333333; /* 边框颜色变深，与禁用状态匹配 */
+}
+
+
+/* ================================= 下拉按钮与箭头样式 ================================= */
+/* 下拉按钮区域（右侧箭头所在的小方块） */
+QComboBox::drop-down {
+    border-left: 1px solid #444444; /* 左侧分隔线，与边框颜色一致 */
+    width: 24px; /* 按钮宽度，适配箭头大小 */
+}
+
+/* 下拉箭头图标 */
+QComboBox::down-arrow {
+    image: url(./icon/communication/arrow_down.png); /* 复用现有箭头图标 */
+    width: 14px; /* 箭头宽度，与按钮区域协调 */
+    height: 14px;
+    margin: 0 4px; /* 箭头与按钮边缘留空隙，避免贴边 */
+}
+
+/* 下拉按钮悬浮时（箭头区域） */
+QComboBox::drop-down:hover {
+    background-color: #222222; /* 按钮区域背景稍亮，反馈交互 */
+}
+
+/* 下拉按钮按下时 */
+QComboBox::drop-down:pressed {
+    background-color: #e67e22; /* 与按钮按下状态一致，用橙色 */
+}
+
+/* 下拉按钮按下时的箭头（反色，增强对比） */
+QComboBox::down-arrow:pressed {
+    image: url(./icon/communication/arrow_down_pressed.png); /* 可选：箭头变黑色 */
+}
+
+
+
+/* 分组框样式 */
+QGroupBox {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding-top: 10px;
+    color: #e67e22;
+    font-family: "黑体";
+    font-size: 12pt;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px 0 5px;
+    color: #e67e22;
+}
+
+/* 标签通用样式 */
+QLabel {
+    color: #a9b7c6;
+    font-family: "Source Han Sans CN";
+    font-size: 8.5pt;
+}
+
+/* 输入框样式 */
+QLineEdit {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 3px 8px;
+    min-height: 28px;
+    color: #a9b7c6;
+    selection-background-color: #e67e22;
+    selection-color: #000000;
+    font-size: 8.5pt;
+}
+
+QLineEdit:focus {
+    border-color: #e67e22;
+    background-color: #1a1a1a;
+}
+
+QLineEdit:hover {
+    border-color: #666666;
+}
+
+/* 日期时间编辑框样式 */
+QDateTimeEdit, QDateEdit, QTimeEdit {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 3px 8px;
+    min-height: 28px;
+    color: #a9b7c6;
+}
+
+QDateTimeEdit:hover, QDateEdit:hover, QTimeEdit:hover {
+    border-color: #e67e22;
+}
+
+QDateTimeEdit:focus, QDateEdit:focus, QTimeEdit:focus {
+    border-color: #e67e22;
+    background-color: #1a1a1a;
+}
+
+QDateTimeEdit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+}
+
+/* 复选框样式 */
+QCheckBox {
+    color: #a9b7c6;
+    spacing: 6px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 3px;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #e67e22;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #e67e22;
+    border-color: #e67e22;
+    image: url(:/icons/checkmark.png);
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #f39c12;
+}
+
+QCheckBox::indicator:disabled {
+    background-color: #1a1a1a;
+    border-color: #2a2a2a;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 5px 15px;
+    color: #a9b7c6;
+    font-size: 8.5pt;
+}
+
+QPushButton:hover {
+    background-color: #2a2a2a;
+    border-color: #e67e22;
+    color: #ffffff;
+}
+
+QPushButton:pressed {
+    background-color: #e67e22;
+    color: #000000;
+    border-color: #e67e22;
+}
+
+QPushButton:disabled {
+    background-color: #1a1a1a;
+    border-color: #2a2a2a;
+    color: #666666;
+}
+
+/* 布局和间隔器样式 */
+QSpacerItem {
+    background-color: transparent;
+}
+
+/* 滚动条样式（如果需要） */
+QScrollBar:vertical {
+    background-color: #121212;
+    width: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #444444;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #e67e22;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: #121212;
+    height: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #444444;
+    border-radius: 6px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #e67e22;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}

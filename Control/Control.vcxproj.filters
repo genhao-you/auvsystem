@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files\layer">
+      <UniqueIdentifier>{87d9ae17-4044-4abe-9a4c-b89321c83f93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\layer">
+      <UniqueIdentifier>{176f1b9b-14d1-45be-a7de-318e5656bf58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\item">
+      <UniqueIdentifier>{0ea71694-1ca9-4d3e-98e1-a984b7075877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\item">
+      <UniqueIdentifier>{b27e947f-b556-4208-91e9-daa4e9bb6851}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tool">
+      <UniqueIdentifier>{9231ed40-20d3-4190-9927-34d20be004c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tool">
+      <UniqueIdentifier>{9cef04b2-8508-4b11-97de-bae347faeb0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="control_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="cs57control.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="cs57control.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="cs57canvas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57canvasimage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57celllayer.h">
+      <Filter>Header Files\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57customlayer.h">
+      <Filter>Header Files\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57highlightlayer.h">
+      <Filter>Header Files\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57mcovrregionlayer.h">
+      <Filter>Header Files\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57layertask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cs57canvas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57canvasimage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57abstractlayer.cpp">
+      <Filter>Source Files\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57celllayer.cpp">
+      <Filter>Source Files\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57customlayer.cpp">
+      <Filter>Source Files\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57highlightlayer.cpp">
+      <Filter>Source Files\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57geometry.cpp">
+      <Filter>Source Files\item</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57polyline.cpp">
+      <Filter>Source Files\item</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57route.cpp">
+      <Filter>Source Files\item</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57maptool.cpp">
+      <Filter>Source Files\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57maptoolpan.cpp">
+      <Filter>Source Files\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57maptoolquery.cpp">
+      <Filter>Source Files\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57maptoolselect.cpp">
+      <Filter>Source Files\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57routemanager.cpp">
+      <Filter>Source Files\item</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57rubberband.cpp">
+      <Filter>Source Files\item</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57point.cpp">
+      <Filter>Source Files\item</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57mcovrregionlayer.cpp">
+      <Filter>Source Files\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57mcovrregionlegend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ixtmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57layertask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="cs57route.h">
+      <Filter>Header Files\item</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57polyline.h">
+      <Filter>Header Files\item</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57geometry.h">
+      <Filter>Header Files\item</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57maptool.h">
+      <Filter>Header Files\tool</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57maptoolpan.h">
+      <Filter>Header Files\tool</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57maptoolquery.h">
+      <Filter>Header Files\tool</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57maptoolselect.h">
+      <Filter>Header Files\tool</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57routemanager.h">
+      <Filter>Header Files\item</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57rubberband.h">
+      <Filter>Header Files\item</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57point.h">
+      <Filter>Header Files\item</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57mcovrregionlegend.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ixtmap.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57abstractlayer.h">
+      <Filter>Header Files\layer</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="cs57mcovrregionlegend.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

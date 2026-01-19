@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files\iso8211">
+      <UniqueIdentifier>{432aac6b-9528-4128-97c4-6f4b9c84b523}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\iso8211">
+      <UniqueIdentifier>{0061340b-b6b0-4a81-894b-777fbb0ff4d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\s57data">
+      <UniqueIdentifier>{e22a7df0-816f-4d3e-a30e-edea03c5fb94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\s57data">
+      <UniqueIdentifier>{2e3ad6b4-b344-463b-b997-176b712ae7bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\s57enc">
+      <UniqueIdentifier>{e26e66d8-e5e7-43ef-946e-6cbc8877ef82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\s57enc">
+      <UniqueIdentifier>{c6db3919-ff64-468d-afd1-58f1df0674ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\s57enc\provider">
+      <UniqueIdentifier>{d91b7884-8133-4337-831e-b1b9155f8b5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\s57enc\provider">
+      <UniqueIdentifier>{922270e8-9522-4fd2-a119-793397c123a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="doc_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClCompile Include="cs57docmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="iso8211\cpl_config.h">
+      <Filter>Header Files\iso8211</Filter>
+    </ClInclude>
+    <ClInclude Include="iso8211\cpl_conv.h">
+      <Filter>Header Files\iso8211</Filter>
+    </ClInclude>
+    <ClInclude Include="iso8211\cpl_error.h">
+      <Filter>Header Files\iso8211</Filter>
+    </ClInclude>
+    <ClInclude Include="iso8211\cpl_multiproc.h">
+      <Filter>Header Files\iso8211</Filter>
+    </ClInclude>
+    <ClInclude Include="iso8211\cpl_port.h">
+      <Filter>Header Files\iso8211</Filter>
+    </ClInclude>
+    <ClInclude Include="iso8211\cpl_string.h">
+      <Filter>Header Files\iso8211</Filter>
+    </ClInclude>
+    <ClInclude Include="iso8211\cpl_vsi.h">
+      <Filter>Header Files\iso8211</Filter>
+    </ClInclude>
+    <ClInclude Include="iso8211\cpl_vsi_private.h">
+      <Filter>Header Files\iso8211</Filter>
+    </ClInclude>
+    <ClInclude Include="iso8211\iso8211.h">
+      <Filter>Header Files\iso8211</Filter>
+    </ClInclude>
+    <ClInclude Include="cs52colortable.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs52layer.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs52lnst.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs52luttable.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs52patt.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs52symb.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs52symboldata.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57attrexpectedvalue.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57feaattrtab.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57feaobjtab.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57preslib.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57abstractprovider.h">
+      <Filter>Header Files\s57enc\provider</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57cellprovider.h">
+      <Filter>Header Files\s57enc\provider</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57globalmapprovider.h">
+      <Filter>Header Files\s57enc\provider</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57mcovrprovider.h">
+      <Filter>Header Files\s57enc\provider</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57abstractcell.h">
+      <Filter>Header Files\s57enc</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57cell.h">
+      <Filter>Header Files\s57enc</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57cellbase.h">
+      <Filter>Header Files\s57enc</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57cellmessage.h">
+      <Filter>Header Files\s57enc</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57recdsgi.h">
+      <Filter>Header Files\s57enc</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57recdsgr.h">
+      <Filter>Header Files\s57enc</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57recfeature.h">
+      <Filter>Header Files\s57enc</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57recvector.h">
+      <Filter>Header Files\s57enc</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57symbolrules.h">
+      <Filter>Header Files\s57enc</Filter>
+    </ClInclude>
+    <ClInclude Include="cs57mcovrregionprovider.h">
+      <Filter>Header Files\s57enc\provider</Filter>
+    </ClInclude>
+    <ClInclude Include="ccdcluttable.h">
+      <Filter>Header Files\s57data</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="iso8211\cpl_conv.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_dir.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_error.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_multiproc.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_path.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_string.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_vsi_mem.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_vsil.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_vsil_unix_stdio_64.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_vsil_win32.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\cpl_vsisimple.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\ddffield.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\ddffielddefn.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\ddfmodule.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\ddfrecord.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\ddfsubfielddefn.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="iso8211\ddfutils.cpp">
+      <Filter>Source Files\iso8211</Filter>
+    </ClCompile>
+    <ClCompile Include="cs52colortable.cpp">
+      <Filter>Source Files\s57data</Filter>
+    </ClCompile>
+    <ClCompile Include="cs52luttable.cpp">
+      <Filter>Source Files\s57data</Filter>
+    </ClCompile>
+    <ClCompile Include="cs52symboldata.cpp">
+      <Filter>Source Files\s57data</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57attrexpectedvalue.cpp">
+      <Filter>Source Files\s57data</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57feaattrtab.cpp">
+      <Filter>Source Files\s57data</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57feaobjtab.cpp">
+      <Filter>Source Files\s57data</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57preslib.cpp">
+      <Filter>Source Files\s57data</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57abstractprovider.cpp">
+      <Filter>Source Files\s57enc\provider</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57cellprovider.cpp">
+      <Filter>Source Files\s57enc\provider</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57globalmapprovider.cpp">
+      <Filter>Source Files\s57enc\provider</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57mcovrprovider.cpp">
+      <Filter>Source Files\s57enc\provider</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57abstractcell.cpp">
+      <Filter>Source Files\s57enc</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57cell.cpp">
+      <Filter>Source Files\s57enc</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57cellbase.cpp">
+      <Filter>Source Files\s57enc</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57cellmessage.cpp">
+      <Filter>Source Files\s57enc</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57recdsgi.cpp">
+      <Filter>Source Files\s57enc</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57recdsgr.cpp">
+      <Filter>Source Files\s57enc</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57recfeature.cpp">
+      <Filter>Source Files\s57enc</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57recvector.cpp">
+      <Filter>Source Files\s57enc</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57symbolrules.cpp">
+      <Filter>Source Files\s57enc</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57mcovrregionprovider.cpp">
+      <Filter>Source Files\s57enc\provider</Filter>
+    </ClCompile>
+    <ClCompile Include="cs57loadcellthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ccdcluttable.cpp">
+      <Filter>Source Files\s57data</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="cs57docmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="cs57loadcellthread.h">
+      <Filter>Header Files\s57enc</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+{
+    "mission": [
+        {
+            "device_id": "021001",
+            "task_id": "26010501",
+            "task_type": 0,
+            "start_pos": [120, 30, 10],
+            "end_pos": [120.001, 30.001, 10],
+            "rotor_speed": 345,
+            "timeout": 453,
+            "max_depth": 23,
+            "min_height": 44,
+            "obstacle_dist": 33,
+            "min_voltage": 22,
+            "max_current": 2,
+            "is_floating": true
+        }
+    ]
+}

@@ -1,0 +1,502 @@
+/* ================================= 自检模块子窗口样式 ================================= */
+
+/* 确保布局嵌套的子部件背景统一 */
+QWidget > QHBoxLayout,
+QWidget > QVBoxLayout,
+QWidget > QGridLayout {
+    /* 布局的父部件已设置深色背景，空隙会继承该颜色 */
+}
+/* ================================= QStackedWidget 子页面 QGroupBox 标题修复 ================================= */
+/* 1. 定位 QStackedWidget 内所有 page 下的 QGroupBox（无 pageType 属性适配） */
+QStackedWidget > QWidget QGroupBox {
+    /* 基础样式保持与全局一致 */
+    background-color: #0a0a0a;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    color: #e67e22;
+    font-weight: bold;
+    
+    /* 关键：增大顶部外边距，给标题留足空间（避免被 page 顶部挤压） */
+    margin-top: 25px !important; /* 优先级拉满，覆盖全局样式 */
+    /* 关键：增大内部顶部内边距，避免标题与内部控件重叠 */
+    padding-top: 30px !important; /* 适配标题高度+内部控件间距 */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+/* 2. 调整 QGroupBox 标题样式（核心修复遮挡问题） */
+QStackedWidget > QWidget QGroupBox::title {
+    subcontrol-origin: padding; /* 标题定位基准改为 QGroupBox 内边距，更稳定 */
+    subcontrol-position: top left;
+    left: 15px; /* 向右微调，远离左侧边框 */
+    top: -12px; /* 向上偏移量减小（原可能过大导致溢出，根据实际情况可微调±2px） */
+    padding: 4px 12px; /* 标题内边距，适配文字长度，避免截断 */
+    background-color: #0a0a0a; /* 标题背景覆盖下方内容，消除遮挡视觉差 */
+    border: 1px solid #444444; /* 强化标题边框，提升辨识度 */
+    border-radius: 4px;
+    font-size: 9pt; /* 与你 UI 中 QGroupBox 标题字体大小一致（9pt） */
+}
+
+/* 3. 单独适配特定 QGroupBox（如 grp_02_TailThruster1，可选，按需调整） */
+/* 若某类 QGroupBox 标题仍遮挡，可通过具体名称精准调整 */
+QStackedWidget > QWidget QGroupBox#grp_02_TailThruster1 {
+    margin-top: 30px !important; /* 进一步增大顶部外边距（极端场景适配） */
+    padding-top: 35px !important;
+}
+
+/* 4. 确保 page 页面本身无挤压（兜底保障） */
+QStackedWidget > QWidget {
+    background-color: #000000; /* 与主窗口背景统一，消除白色空隙 */
+    padding: 10px; /* page 页面内边距，避免 QGroupBox 贴边 */
+}
+/* 自检对话框容器 */
+SelfCheckMainDialogClass{
+    background-color: #000000;
+     border: none; /* 去除默认窗口边框，避免透白 */
+    border-radius: 8px; /* 保持原有圆角风格 */
+    overflow: hidden; /* 防止内容溢出导致边缘透白 */
+}
+
+
+/* 自检对话框标题 */
+QLabel#lblSelfCheckTitle {
+    color: #e67e22;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #333333;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+/* ================================= 任务树控件样式（合并统一，适配AMOLED风格） ================================= */
+/* 1. 树控件基础容器样式 */
+QTreeWidget#treeWidget_mission {
+    background-color: #000000;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-family: "黑体", "Source Han Sans CN", sans-serif;
+    font-size: 8.5pt;
+    padding: 10px;
+    spacing: 8px;
+    color: #a9b7c6;
+    outline: 0;
+    selection-background-color: #e67e22;
+    selection-color: #000000;
+}
+
+/* 2. 树控件表头样式 */
+QTreeWidget#treeWidget_mission QHeaderView::section {
+    background-color: #0a0a0a;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    color: #a9b7c6;
+    font-size: 8.5pt;
+    height: 24px;
+    padding: 0 8px;
+}
+
+/* 隐藏表头多余边框 */
+QTreeWidget#treeWidget_mission QHeaderView {
+    border: none;
+}
+
+/* 3. 树节点基础样式 */
+QTreeWidget#treeWidget_mission::item {
+    color: #a9b7c6;
+    height: 35px;
+    padding: 0 4px;
+    background-color: transparent;
+    border: none;
+}
+
+/* 4. 节点交互状态样式 */
+QTreeWidget#treeWidget_mission::item:hover {
+    background-color: #1a1a1a;
+    border-radius: 3px;
+}
+
+QTreeWidget#treeWidget_mission::item:selected {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    color: #000000;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* 5. 节点展开/折叠按钮样式 */
+QTreeWidget#treeWidget_mission::branch {
+    background-color: transparent;
+}
+
+/* 闭合状态（有子节点） */
+QTreeWidget#treeWidget_mission::branch:closed:has-children {
+    image: url(./icon/selfcheck/branch_closed.png); /* 复用已生效的闭合图标 */
+    width: 16px;
+    height: 16px;
+}
+
+/* 展开状态（有子节点） */
+QTreeWidget#treeWidget_mission::branch:open:has-children {
+    image: url(./icon/selfcheck/branch_open.png); /* 使用新路径的展开图标 */
+    width: 16px;
+    height: 16px;
+}
+/* 6. 节点图标与文字间距 */
+QTreeWidget#treeWidget_mission::item::icon {
+    margin-right: 8px;
+}
+
+/* 7. 禁用状态 */
+QTreeWidget#treeWidget_mission:disabled {
+    background-color: #1a1a1a;
+    color: #666666;
+    border-color: #333333;
+}
+
+/* ================================= 堆叠窗口样式 ================================= */
+QStackedWidget {
+    background-color: #0a0a0a;
+    border: 1px solid #333333;
+    border-radius: 4px;
+}
+
+/* 堆叠窗口中的页面 */
+QWidget[pageType="devicePage"] {
+    background-color: #0a0a0a;
+    padding: 10px;
+}
+
+/* ================================= 按钮样式 ================================= */
+/* 通用按钮样式 */
+QPushButton {
+    color: #a9b7c6;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #222222, stop:1 #111111);
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-height: 32px;
+    font-size: 9pt;
+}
+
+QPushButton:hover {
+    border-color: #e67e22;
+    color: #ffffff;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #2a2a2a, stop:1 #1a1a1a);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    color: #000000;
+    border-color: #ff9933;
+}
+
+QPushButton:disabled {
+    background: #1a1a1a;
+    color: #666666;
+    border-color: #333333;
+}
+
+/* 无线电按钮 */
+QPushButton#btn_radio {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #1a2a3a, stop:1 #0a1a2a);
+    border-color: #556677;
+}
+
+/* 尾推上电按钮 */
+QPushButton#btn_tail_powerOn {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #1a2a1a, stop:1 #0a1a0a); /* 修正：原代码stop:1 #0a1a0极 */
+    border-color: #446644;
+}
+
+/* ================================= 设备页面样式 ================================= */
+/* 通信设备页面 */
+QWidget[devicePage="CORRESPOND"] {
+    background-color: #0a0a0a;
+}
+
+/* 导航定位页面 */
+QWidget[devicePage="NAVIGATIONWITHLOCATION"] {
+    background-color: #0a0a0a;
+}
+
+/* 数据采集页面 */
+QWidget[devicePage="DATAACQUISITION"] {
+    background-color: #0a0a0a;
+}
+
+/* 推进装置页面 */
+QWidget[devicePage="PROMOTINGDEVICE"] {
+    background-color: #0a0a0a;
+}
+
+/* 转向装置页面 */
+QWidget[devicePage="STEERINGDEVICE"] {
+    background-color: #0a0a0a;
+}
+
+/* 能源与续航页面 */
+QWidget[devicePage="ENERGYWITHENDURANCE"] {
+    background-color: #0a0a0a;
+}
+
+/* 浮力调节页面 */
+QWidget[devicePage="BUOYANCYREGULATION"] {
+    background-color: #0a0a0a;
+}
+
+/* 应急系统页面 */
+QWidget[devicePage="EMERGENCYSYSTEM"] {
+    background-color: #0a0a0a;
+}
+
+/* ================================= 状态指示器样式 ================================= */
+/* 设备状态指示灯 */
+QLabel[statusType="deviceStatus"] {
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    border-radius: 8px;
+    border: 1px solid #444444;
+    background-color: #333333;
+}
+
+QLabel[statusType="deviceStatus"][status="normal"] {
+    background-color: #4CAF50;
+    border-color: #66BB6A;
+}
+
+QLabel[statusType="deviceStatus"][status="warning"] {
+    background-color: #FF9800;
+    border-color: #FFA726;
+}
+
+QLabel[statusType="deviceStatus"][status="error"] {
+    background-color: #F44336;
+    border-color: #EF5350;
+}
+
+QLabel[statusType="deviceStatus"][status="offline"] {
+    background-color: #666666;
+    border-color: #888888;
+}
+
+/* ================================= 结果展示区域 ================================= */
+/* 自检结果展示 */
+QLabel#lblResultDisplay {
+    background-color: #121212;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 10px;
+    color: #a9b7c6;
+    font-size: 9pt;
+    min-height: 80px;
+}
+
+QLabel#lblResultDisplay[resultType="success"] {
+    border-left: 3px solid #4CAF50;
+    color: #4CAF50;
+}
+
+QLabel#lblResultDisplay[resultType="warning"] {
+    border-left: 3px solid #FF9800;
+    color: #FF9800;
+}
+
+QLabel#lblResultDisplay[resultType="error"] {
+    border-left: 3px solid #F44336;
+    color: #F44336;
+}
+
+/* ================================= 表单控件样式 ================================= */
+/* 标签样式 */
+QLabel[fieldType="label"] {
+    color: #a9b7c6;
+    font-size: 8pt; /* 修正：原代码font-size: 极2px */
+    min-height: 32px;
+    line-height: 32px;          /* 垂直居中 */
+    padding: 4px 0;
+}
+
+/* 输入框样式 */
+QLineEdit {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 6px 8px;
+    color: #a9b7c6;
+    selection-background-color: #e67e22;
+    selection-color: #000000;
+    min-height: 32px;
+    height: 32px;               /* 固定高度，与按钮完全匹配 */
+    font-size: 9pt;             /* 字体大小与按钮一致 */
+}
+
+QLineEdit:focus {
+    border-color: #e67e22;
+    background-color: #1a1a1a;
+}
+
+
+/* ================================= 布局优化 ================================= */
+/* 水平布局 */
+QHBoxLayout {
+    spacing: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 垂直布局 */
+QVBoxLayout {
+    spacing: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 网格布局 */
+QGridLayout {
+    spacing: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 分组框样式 */
+QGroupBox {
+    border: 1px solid #333333;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #e67e22;
+    font-weight: bold;
+    background-color: #0a0a0a;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 10px;
+    padding: 0 8px;
+    background-color: #0a0a0a;
+}
+
+/* ================================= 滚动条样式 ================================= */
+QScrollBar:vertical {
+    width: 10px;
+    background: #0a0a0a;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #444444;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #e67e22;
+}
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    height: 10px; /* 修正：原代码height: 10极 */
+    background: #0a0a0a;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #444444;
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #e67e22;
+}
+
+QScrollBar::add-line:horizontal, 
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+
+/* 按钮点击效果 - 使用颜色变化代替动画 */
+QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    color: #000000;
+    border-color: #ff9933;
+}
+/* ========== QMessageBox样式 ========== */
+QMessageBox {
+    background-color: #121212;
+    color: #a9b7c6;
+    border: 1px solid #444444;
+    border-radius: 8px;
+}
+
+/* 消息框标题文本 */
+QMessageBox QLabel#qt_msgbox_label {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 9pt;
+    padding-bottom: 8px;
+}
+
+/* 消息框内容文本 */
+QMessageBox QLabel {
+    color: #a9b7c6;
+    font-size: 8.5pt;
+    padding: 4px 8px;
+}
+
+/* 消息框按钮 */
+QMessageBox QPushButton {
+    background-color: #2a2a2a;
+    color: #a9b7c6;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 6px 16px;
+    min-width: 80px;
+    min-height: 80px;
+    font-size: 8.5pt;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #e67e22;
+    color: #000000;
+    border-color: #e67e22;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #d35400;
+    border-color: #d35400;
+}
+
+/* 消息框按钮布局 */
+QMessageBox QDialogButtonBox {
+    padding: 10px;
+    spacing: 8px;
+}
+
+/* 消息框图标区域 */
+QMessageBox QWidget#qt_msgbox_icon_label {
+    padding: 10px;
+}
+

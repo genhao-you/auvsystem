@@ -1,0 +1,23 @@
+<UI version="4.0" >
+ <class>CS57McovrRegionLegend</class>
+ <widget class="QDialog" name="CS57McovrRegionLegend" >
+  <property name="objectName" >
+   <string notr="true">CS57McovrRegionLegend</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>400</width>
+	<height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>CS57McovrRegionLegend</string>
+  </property>
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</UI>

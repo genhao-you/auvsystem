@@ -1,0 +1,373 @@
+/* ================================= 使命监控界面QSS（修复树控件和工具栏问题） ================================= */
+/* 全局基础样式 */
+QWidget#MissionMonitorWidgetClass {
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    min-width: 2500px; /* 根据实际布局设置最小窗口宽度 */
+    min-height: 1500px; 
+
+}
+
+QLabel, QPushButton, QAction, QToolBar, QStatusBar, QDockWidget, QTreeView, QStackedWidget {
+    font-family: "Source Han Sans CN";
+    font-size: 8.5pt;
+    line-height: 1.6;
+    color: #a9b7c6;
+}
+
+/* ================================= 按钮样式 ================================= */
+/* 通用按钮样式 */
+QPushButton {
+    color: #a9b7c6;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #222222, stop:1 #111111);
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-height: 32px;
+    font-size: 9pt;
+}
+
+QPushButton:hover {
+    border-color: #e67e22;
+    color: #ffffff;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #2a2a2a, stop:1 #1a1a1a);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    color: #000000;
+    border-color: #ff9933;
+}
+
+QPushButton:disabled {
+    background: #1a1a1a;
+    color: #666666;
+    border-color: #333333;
+}
+/* ================================= 下拉按钮与箭头样式 ================================= */
+/* 下拉按钮区域（右侧箭头所在的小方块） */
+QComboBox::drop-down {
+    border-left: 1px solid #444444; /* 左侧分隔线，与边框颜色一致 */
+    width: 24px; /* 按钮宽度，适配箭头大小 */
+}
+
+/* 下拉箭头图标 */
+QComboBox::down-arrow {
+    image: url(./icon/communication/arrow_down.png); /* 复用现有箭头图标 */
+    width: 14px; /* 箭头宽度，与按钮区域协调 */
+    height: 14px;
+    margin: 0 4px; /* 箭头与按钮边缘留空隙，避免贴边 */
+}
+
+/* 下拉按钮悬浮时（箭头区域） */
+QComboBox::drop-down:hover {
+    background-color: #222222; /* 按钮区域背景稍亮，反馈交互 */
+}
+
+/* 下拉按钮按下时 */
+QComboBox::drop-down:pressed {
+    background-color: #e67e22; /* 与按钮按下状态一致，用橙色 */
+}
+
+/* 下拉按钮按下时的箭头（反色，增强对比） */
+QComboBox::down-arrow:pressed {
+    image: url(./icon/communication/arrow_down_pressed.png); /* 可选：箭头变黑色 */
+}
+/* ================================= QDateTimeEdit样式 ================================= */
+QDateTimeEdit, QDateEdit, QTimeEdit {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 3px 8px;
+    min-height: 28px;
+    color: #a9b7c6;
+}
+
+QDateTimeEdit:hover, QDateEdit:hover, QTimeEdit:hover {
+    border-color: #e67e22;
+}
+
+QDateTimeEdit:focus, QDateEdit:focus, QTimeEdit:focus {
+    border-color: #e67e22;
+    background-color: #1a1a1a;
+}
+
+QDateTimeEdit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+}
+
+/* ================================= QCheckBox样式 ================================= */
+QCheckBox {
+    spacing: 6px;
+    color: #a9b7c6;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 3px;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #e67e22;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #e67e22;
+    border-color: #e67e22;
+    image: url(:/icons/checkmark.png); /* 可替换为实际勾选图标 */
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #f39c12;
+}
+
+QCheckBox::indicator:disabled {
+    background-color: #1a1a1a;
+    border-color: #2a2a2a;
+    color: #666666;
+}
+
+/* ================================= 2. 彻底修复树控件白色文字问题 ================================= */
+/* 强制所有层级节点使用深色文字 */
+QTreeView#missionTree,
+QTreeView#missionView,
+QTreeView {
+    background-color: #121212 !important; /* 强制背景色 */
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: #a9b7c6 !important; /* 强制文字颜色 */
+    alternate-background-color: #1a1a1a;
+    show-decoration-selected: 0; /* 避免装饰器影响颜色 */
+}
+
+/* 确保所有状态下的节点文字颜色正确 */
+QTreeView::item {
+    height: 22px;
+    padding: 2px 4px;
+    color: #a9b7c6 !important; /* 强制覆盖所有情况 */
+    background-color: transparent;
+}
+
+QTreeView::item:hover {
+    background-color: #2a2a2a;
+    color: #ffffff !important;
+}
+
+QTreeView::item:selected {
+    background-color: #e67e22;
+    color: #000000 !important;
+}
+
+QTreeView::item:selected:active,
+QTreeView::item:selected:!active {
+    color: #000000 !important;
+}
+QTreeView::item:selected:hover {
+    background-color: #f39c12; /* 稍亮的橙色 */
+    color: #000000 !important;
+}
+
+/* ==================== 新增：QTreeView分支/图标样式（与QTreeWidget保持一致） ==================== */
+/* 分支线背景 */
+QTreeView::branch {
+    background-color: #121212;
+}
+
+/* 闭合状态（有子节点） */
+QTreeView::branch:closed:has-children {
+    image: url(./icon/selfcheck/branch_closed.png); /* 使用与QTreeWidget相同的闭合图标 */
+    width: 32px;
+    height: 32px;
+}
+
+/* 展开状态（有子节点） */
+QTreeView::branch:open:has-children {
+    image: url(./icon/selfcheck/branch_open.png); /* 使用与QTreeWidget相同的展开图标 */
+    width: 32px;
+    height: 32px;
+}
+
+/* 无子节点的分支（可选：隐藏或使用默认样式） */
+QTreeView::branch:!has-children {
+    image: none; /* 无子节点时不显示图标 */
+}
+
+/* 节点图标与文字间距 */
+QTreeView::item::icon {
+    margin-right: 8px; /* 与QTreeWidget保持一致的间距 */
+}
+
+/* 修复表头（如果有） */
+QTreeView::header {
+    background-color: #121212;
+    color: #a9b7c6;
+}
+
+QTreeView::header::section {
+    background-color: #121212;
+    color: #a9b7c6;
+    border: 1px solid #444444;
+}/* ================================= 输入框与文本编辑框（数据录入区） ================================= */
+QLineEdit, QTextEdit {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 3 8px;
+    min-height: 28px; /* 缩小高度，适配10pt字体 */
+    max-height: none;
+    color: #a9b7c6;
+    selection-background-color: #e67e22;
+    selection-color: #000000;
+    font-size: 8.5pt;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #e67e22;
+    background-color: #1a1a1a;
+}
+
+/* ================================= 其他样式保持不变 ================================= */
+
+QDockWidget {
+    color: #e67e22;
+}
+
+QDockWidget::title {
+    background-color: #121212;
+    border-bottom: 1px solid #444444;
+    padding: 2px 8px;
+}
+
+QDockWidget#leftMissionDock,
+QDockWidget#rightEditorDock {
+    background-color: #0a0a0a;
+    border: 1px solid #444444;
+}
+
+QStackedWidget#editorContainer {
+    background-color: #121212;
+    border: 1px solid #444444;
+    border-radius: 4px;
+}
+
+/* 滚动条样式 */
+QScrollBar:horizontal {
+    max-height: 12px;
+    background-color: #000000;
+    border: 1px solid #333333;
+    margin: 0px 18px 0 18px;
+}
+
+QScrollBar::handle:horizontal {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    border-radius: 6px;
+    min-width: 30px;
+}
+
+QScrollBar:vertical {
+    max-width: 12px;
+    background-color: #000000;
+    border: 1px solid #333333;
+    margin: 18px 0 18px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #e67e22, stop:1 #c06618);
+    border-radius: 6px;
+    min-height: 30px;
+}
+/* ================================= 2. 修复状态栏底色和字体 ================================= */
+/* 状态栏本身：强制深黑背景+橙色文字 */
+QStatusBar#statusBar {
+    background-color: #121212 !important; /* 与主界面一致的深黑背景 */
+    border-top: 1px solid #444444 !important;
+    color: #e67e22 !important;           /* 主界面橙色强调色，替代灰色 */
+    min-height: 40px !important; /* 确保状态栏高度足够 */
+    padding: 2px 5px; /* 内边距，避免内容被边框遮挡 */
+}
+/* 状态栏内的所有标签 */
+QStatusBar#statusBar QLabel {
+    color: #e67e22 !important;
+    background-color: transparent !important;
+    padding: 2px 4px;
+    min-height: 30px !important; /* 强制标签最小高度 */
+    line-height: 30px !important; /* 行高与标签高度一致，确保文字垂直居中 */
+    font-size: 9pt; /* 确保字体大小适配高度 */
+   
+}
+/* 状态栏内的标签：强制橙色文字 */
+QLabel#auvStatusLabel,
+QLabel#pGeoLabel,
+QLabel#pScaleLabel,
+QLabel#dataUpdateTimeLabel {
+    color: #e67e22 !important;           /* 统一橙色文字 */
+    background-color: transparent !important;
+    padding: 2px 4px;
+}
+/* ========== QMessageBox样式 ========== */
+QMessageBox {
+    background-color: #121212;
+    color: #a9b7c6;
+    border: 1px solid #444444;
+    border-radius: 8px;
+}
+
+/* 消息框标题文本 */
+QMessageBox QLabel#qt_msgbox_label {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 9pt;
+    padding-bottom: 8px;
+}
+
+/* 消息框内容文本 */
+QMessageBox QLabel {
+    color: #a9b7c6;
+    font-size: 8.5pt;
+    padding: 4px 8px;
+}
+
+/* 消息框按钮 */
+QMessageBox QPushButton {
+    background-color: #2a2a2a;
+    color: #a9b7c6;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 6px 16px;
+    min-width: 80px;
+    min-height: 30px;
+    font-size: 8.5pt;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #e67e22;
+    color: #000000;
+    border-color: #e67e22;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #d35400;
+    border-color: #d35400;
+}
+
+/* 消息框按钮布局 */
+QMessageBox QDialogButtonBox {
+    padding: 10px;
+    spacing: 8px;
+}
+
+/* 消息框图标区域 */
+QMessageBox QWidget#qt_msgbox_icon_label {
+    padding: 10px;
+}

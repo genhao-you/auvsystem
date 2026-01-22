@@ -17,7 +17,7 @@ enum class ControlType : uint8_t {
 
 
 // ========== 控制参数模块专属常量（参数相关） ==========
-constexpr int16_t CONTROL_PARAM_SCALE = 1000;  // 参数缩放系数
+constexpr int16_t CONTROL_PARAM_SCALE = 100;  // 参数缩放系数
 constexpr int CMD_TIMEOUT_MS = 5000;           // 命令超时时间
 constexpr int CLEANUP_INTERVAL_MS = 30000;     // 清理间隔
 

@@ -1,5 +1,6 @@
 #pragma once
-#include"selfcheckenum.h"
+#include "selfcheckenum.h"
+#include "controlparamdefs.h"
 // 枚举与字符串转换工具（数据驱动）
 class EnumConverter {
 public:

@@ -195,6 +195,18 @@
     <Filter Include="Source Files\ControlParamModule">
       <UniqueIdentifier>{8ef37886-6215-416f-87a9-549734fc9c11}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\SelfCheckModule\Core">
+      <UniqueIdentifier>{48deeb31-8b90-4424-bdfc-80d5cddcccd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SelfCheckModule\Core">
+      <UniqueIdentifier>{60f6edbe-31f1-43e7-a88e-d2d11b16ab5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SelfCheckModule\Handlers">
+      <UniqueIdentifier>{bacee193-6306-4488-8b34-4d50890c7e1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SelfCheckModule\Handlers">
+      <UniqueIdentifier>{aec233f2-90fe-4286-9aca-743e81de120e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="auvshorecontrol.qrc">
@@ -447,6 +459,57 @@
     </ClCompile>
     <ClCompile Include="sailcontrolmodule.cpp">
       <Filter>Header Files\MainWindowModule</Filter>
+    </ClCompile>
+    <ClCompile Include="devicehandlerbase.cpp">
+      <Filter>Source Files\SelfCheckModule\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="thrusterhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="commandregistry.cpp">
+      <Filter>Source Files\SelfCheckModule\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="widgetmanager.cpp">
+      <Filter>Source Files\SelfCheckModule\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="rudderhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="depthmeterhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="altimeterhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="usblhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="camerahandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="inshandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="buoyancyhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="sonarhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="dvlhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="batteryhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="dropweighthandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="acousticcommhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="beidoucommhandler.cpp">
+      <Filter>Source Files\SelfCheckModule\Handlers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -704,6 +767,51 @@
     <QtMoc Include="sailcontrolmodule.h">
       <Filter>Header Files\MainWindowModule</Filter>
     </QtMoc>
+    <QtMoc Include="devicehandlerbase.h">
+      <Filter>Header Files\SelfCheckModule\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="thrusterhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="rudderhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="depthmeterhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="altimeterhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="usblhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="camerahandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="inshandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="buoyancyhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="sonarhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="dvlhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="batteryhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="dropweighthandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="acousticcommhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
+    <QtMoc Include="beidoucommhandler.h">
+      <Filter>Header Files\SelfCheckModule\Handlers</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -873,6 +981,12 @@
     </ClInclude>
     <ClInclude Include="sailcontroldefs.h">
       <Filter>Header Files\MainWindowModule</Filter>
+    </ClInclude>
+    <ClInclude Include="commandregistry.h">
+      <Filter>Header Files\SelfCheckModule\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="widgetmanager.h">
+      <Filter>Header Files\SelfCheckModule\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

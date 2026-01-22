@@ -107,14 +107,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="acousticcommhandler.cpp" />
+    <ClCompile Include="altimeterhandler.cpp" />
     <ClCompile Include="auvinfopanel.cpp" />
     <ClCompile Include="auvrenderer.cpp" />
     <ClCompile Include="basemodule.cpp" />
     <ClCompile Include="baseresult.cpp" />
+    <ClCompile Include="batteryhandler.cpp" />
     <ClCompile Include="bdschannel.cpp" />
     <ClCompile Include="bdsconfig.cpp" />
     <ClCompile Include="beaconcommunciationtaskediotor.cpp" />
+    <ClCompile Include="beidoucommhandler.cpp" />
+    <ClCompile Include="buoyancyhandler.cpp" />
+    <ClCompile Include="camerahandler.cpp" />
     <ClCompile Include="commandparameter.cpp" />
+    <ClCompile Include="commandregistry.cpp" />
     <ClCompile Include="communicationchannelbase.cpp" />
     <ClCompile Include="communicationmanager.cpp" />
     <ClCompile Include="communicationmodule.cpp" />
@@ -128,9 +135,13 @@
     <ClCompile Include="datamodule.cpp" />
     <ClCompile Include="dataquerydialog.cpp" />
     <ClCompile Include="datasourceselector.cpp" />
+    <ClCompile Include="depthmeterhandler.cpp" />
+    <ClCompile Include="devicehandlerbase.cpp" />
     <ClCompile Include="devicemonitordialog.cpp" />
     <ClCompile Include="dispatchstrategies.cpp" />
     <ClCompile Include="documentmodel.cpp" />
+    <ClCompile Include="dropweighthandler.cpp" />
+    <ClCompile Include="dvlhandler.cpp" />
     <ClCompile Include="editormanager.cpp" />
     <ClCompile Include="elevationcanvas.cpp" />
     <ClCompile Include="elevationdata.cpp" />
@@ -142,6 +153,7 @@
     <ClCompile Include="frame.cpp" />
     <ClCompile Include="framebuilder.cpp" />
     <ClCompile Include="frameparser.cpp" />
+    <ClCompile Include="inshandler.cpp" />
     <ClCompile Include="MapModule\cmapcanvas.cpp" />
     <ClCompile Include="MapModule\s57mapmodule.cpp" />
     <ClCompile Include="maptoolauv.cpp" />
@@ -164,6 +176,7 @@
     <ClCompile Include="radioconfig.cpp" />
     <ClCompile Include="missionmonitormodule.cpp" />
     <ClCompile Include="recoverytaskeditor.cpp" />
+    <ClCompile Include="rudderhandler.cpp" />
     <ClCompile Include="sailcontrolmodule.cpp" />
     <ClCompile Include="sailrestrictiondialog.cpp" />
     <ClCompile Include="sailtaskeditor.cpp" />
@@ -172,17 +185,21 @@
     <ClCompile Include="selfcheckmodule.cpp" />
     <ClCompile Include="shorebasedstriketaskeditor.cpp" />
     <ClCompile Include="silenttaskeditor.cpp" />
+    <ClCompile Include="sonarhandler.cpp" />
     <ClCompile Include="striketaskeditor.cpp" />
     <ClCompile Include="task.cpp" />
     <ClCompile Include="taskmonitordialog.cpp" />
     <ClCompile Include="tasksequenceserializer.cpp" />
+    <ClCompile Include="thrusterhandler.cpp" />
     <ClCompile Include="tifmaptool.cpp" />
     <ClCompile Include="tifmaptoolpan.cpp" />
     <ClCompile Include="timeeditor.cpp" />
     <ClCompile Include="timestampprocessor.cpp" />
     <ClCompile Include="unitssettingdialog.cpp" />
+    <ClCompile Include="usblhandler.cpp" />
     <ClCompile Include="wateracousticchannel.cpp" />
     <ClCompile Include="wateracousticconfig.cpp" />
+    <ClCompile Include="widgetmanager.cpp" />
     <ClCompile Include="wirednetworkconfig.cpp" />
     <ClCompile Include="wirelessnetworkchannel.cpp" />
     <ClCompile Include="wirelessnetworkconfig.cpp" />
@@ -224,15 +241,22 @@
     <QtMoc Include="basemodule.h" />
     <QtMoc Include="auvrenderer.h" />
     <QtMoc Include="auvinfopanel.h" />
+    <QtMoc Include="altimeterhandler.h" />
+    <QtMoc Include="acousticcommhandler.h" />
     <ClInclude Include="baseresult.h" />
     <QtMoc Include="bdschannel.h" />
+    <QtMoc Include="batteryhandler.h" />
     <ClInclude Include="bdsconfig.h" />
     <ClInclude Include="BeidouATAdapter .h" />
     <ClInclude Include="beidouATcommandmapper.h" />
+    <QtMoc Include="camerahandler.h" />
+    <QtMoc Include="buoyancyhandler.h" />
+    <QtMoc Include="beidoucommhandler.h" />
     <ClInclude Include="cameramediaseq.h" />
     <ClInclude Include="commandparameter.h" />
     <QtMoc Include="communicationmodule.h" />
     <QtMoc Include="configworker.h" />
+    <ClInclude Include="commandregistry.h" />
     <ClInclude Include="commonenum.h" />
     <ClInclude Include="communicationchannelstatusresult.h" />
     <QtMoc Include="controlparamsettingdialog.h" />
@@ -242,6 +266,8 @@
     <ClInclude Include="crccalculator.h" />
     <QtMoc Include="datamodule.h" />
     <ClInclude Include="dataresult.h" />
+    <QtMoc Include="devicehandlerbase.h" />
+    <QtMoc Include="depthmeterhandler.h" />
     <ClInclude Include="devicepage.h" />
     <ClInclude Include="datafilter.h" />
     <QtMoc Include="datasourceselector.h" />
@@ -249,6 +275,8 @@
     <QtMoc Include="messagedispatcher.h" />
     <ClInclude Include="dispatchstrategies.h" />
     <QtMoc Include="elevationcanvas.h" />
+    <QtMoc Include="dvlhandler.h" />
+    <QtMoc Include="dropweighthandler.h" />
     <ClInclude Include="elevationdata.h" />
     <ClInclude Include="enumconverter.h" />
     <ClInclude Include="frame.h" />
@@ -262,6 +290,7 @@
     <ClInclude Include="ftpprogressresult.h" />
     <ClInclude Include="ftpsupportinterface.h" />
     <ClInclude Include="ftptransferresult.h" />
+    <QtMoc Include="inshandler.h" />
     <ClInclude Include="insparse.h" />
     <ClInclude Include="internalprotocoladapter.h" />
     <ClInclude Include="messagetype.h" />
@@ -274,6 +303,7 @@
     <ClInclude Include="observer.h" />
     <ClInclude Include="radioconfig.h" />
     <QtMoc Include="missionmonitormodule.h" />
+    <QtMoc Include="rudderhandler.h" />
     <ClInclude Include="sailcontroldefs.h" />
     <QtMoc Include="sailcontrolmodule.h" />
     <ClInclude Include="satelliteconfig.h" />
@@ -286,11 +316,15 @@
     <QtMoc Include="tifmaptool.h" />
     <QtMoc Include="tifmaptoolpan.h" />
     <ClInclude Include="selfchecksendresult.h" />
+    <QtMoc Include="sonarhandler.h" />
     <ClInclude Include="tasksequenceserializer.h" />
+    <QtMoc Include="thrusterhandler.h" />
     <ClInclude Include="UIFactory.h" />
     <QtMoc Include="unitssettingdialog.h" />
     <QtMoc Include="wateracousticchannel.h" />
+    <QtMoc Include="usblhandler.h" />
     <ClInclude Include="wateracousticconfig.h" />
+    <ClInclude Include="widgetmanager.h" />
     <ClInclude Include="wirednetworkconfig.h" />
     <QtMoc Include="wirelessnetworkchannel.h" />
     <ClInclude Include="wirelessnetworkconfig.h" />
